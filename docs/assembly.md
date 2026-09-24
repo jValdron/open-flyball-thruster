@@ -284,7 +284,7 @@ Drill **4 × 6.5 mm** holes, **56 mm × 60 mm** apart, around the 2" hole. Or si
 |:--:|
 | *Four 6.5 mm holes marked and drilled around the 2" hole.* |
 
-Mount the thruster with the **4 × M6 × 60 mm** screws and the **4 × M6 nuts**. The slots in the baffles and base let you shift the thruster a bit: line the plunger up in the middle of the hole, then tighten the nuts.
+Mount the thruster with the **4 × M6 × 60 mm** screws and the **4 × M6 nuts**. The slots in the baffles and base let you shift the thruster a bit. Line the plunger up in the middle of the hole, then tighten the nuts.
 
 | ![Mounted thruster](images/mounted.jpeg) |
 |:--:|
