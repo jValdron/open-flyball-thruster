@@ -48,7 +48,7 @@ Familiarity with OpenSCAD is helpful if you want to tweak dimensions or part geo
 * Assemble the thruster, see [docs/assembly.md](docs/assembly.md)
 * Tune as necessary, see [docs/tuning.md](docs/tuning.md)
 
-A more detailed instructions guide can be found under [docs/instructions.md](docs/instructions.md).
+Follow [docs/instructions.md](docs/instructions.md) to get started.
 
 ### Assembly Timelapse
 https://github.com/user-attachments/assets/54a8cb0c-5971-4721-8ede-dae078966e4b
