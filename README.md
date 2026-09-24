@@ -15,8 +15,9 @@ If you're here, you're most likely looking at building your own thruster. My fir
 - **Not battle-tested.** These thrusters have been used for about a year now, weekly at practice and a half dozen of times at a tournament. They've been working without any issues but we recommend you buy thrusters from established suppliers, for example:
   - **[Jarvis Flyball Box](https://www.flyballbox.ca/)** (Canada)
   - **[Sub 15](https://www.facebook.com/p/Sub-15-61551941167602/)** (UK)
+  - Please let me know if you want your name added (or removed) from the above list.
 
-Please let me know if you want your name added (or removed) from the above list.
+- **Many small parts.** Since these combine 3D printed parts and metal parts instead of custom machined parts, they contain many more small parts than a proper thruster would, making them more susceptible to breaking.
 
 - **No support or warranty.** All of the files and instructions provided in this repository are provided as is and with no support or warranty. I am not responsible for any accident, injuries or whatever happens while building or using these.
 
@@ -26,13 +27,15 @@ Please let me know if you want your name added (or removed) from the above list.
 
 
 ## Introduction
-![Side view](docs/images/assembled.jpeg)
+| ![Side view](docs/images/assembled.jpeg) | ![Mounted in a box](docs/images/in_box.jpeg) |
+|:---------:|:--------:|
+| Side view | 4 thrusters mounted in a box |
 
 An **open-source**, **low-cost** [flyball](https://en.wikipedia.org/wiki/Flyball) thruster design aimed at DIY builders. This repository covers the **thrusters only**; it does not include any instructions for building a flyball box.
 
 Thrusters are built from a mix of **printed parts** and **off-the-shelf hardware**, with some basic machining required. Printed parts are defined in [OpenSCAD](https://openscad.org/), with some customization available.
 
-The target cost is, currently, approximately **$30 USD** per thruster, excluding tools and printer access.
+The target cost is, currently, approximately **$35 USD** per thruster, excluding tools and printer access.
 
 
 ### A Note About 3D Printed Parts
