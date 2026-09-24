@@ -1,6 +1,6 @@
 # Tuning
 
-Set these in order. Adjust the **plunger position** before you adjust the **rest to loaded travel**.
+Set these in order. Adjust the **plunger position (rear collar)** before you adjust the **rest to loaded travel (shaft coupler)**.
 
 - [Summary](#summary)
 - [1. Plunger position](#1-plunger-position)
