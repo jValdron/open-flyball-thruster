@@ -157,6 +157,7 @@ You will need:
 - **2 ×** 8 mm shaft lock collars
 - **70 mm** main compression spring
 - **M4 × 3 mm** grub screws
+- **2 ×** TPU washers (optional)
 
 Slide the linear rod, **the end without the plunger**, into the main body through the base gasket (see the [backstop picture](#34-backstop) above).
 
@@ -171,6 +172,8 @@ Slide the **70 mm** main spring onto the linear rod, push the rod through the ba
 | ![Spring and end collar](images/linear_rod_spring_collar.jpeg) |
 |:--:|
 | *Main spring on the rod, second shaft collar past the backstop.* |
+
+Optionally, slide a TPU washer between the shaft collar and the main spring, and another TPU washer between the backstop and the shaft collar. This dampens vibration a bit and makes the thrusters a lot quieter.
 
 Add the short **4 × M4 × 3 mm** grub screws to the shaft coupler. The exact position of the two shaft collars and the shaft coupler does not matter much at this point. Tighten the grub screws **lightly** so things stay in place; do not tighten them all the way yet.
 
