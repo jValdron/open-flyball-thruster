@@ -1,5 +1,7 @@
 # Bill of Materials (BOM)
 
+![All parts (not 100% accurate)](images/parts.jpeg)
+
 Per-thruster parts list. Multiply quantities by the number of thrusters you want to build.
 
 Prices are approximate (CAD from original sources); expect ~\$40–45 CAD, or ~\$30 USD, per thruster depending on source and shipping.
@@ -13,7 +15,8 @@ Some parts are best bought in bulk, such as the aluminum extrusion and any faste
 | 2 | [1515 aluminum profiles × 115 mm](https://www.amazon.ca/dp/B06XJ42W51) (profile) | $3.34 [^1] | $6.68 | 15×15 mm extrusion for main profile |
 | 1 | 1515 aluminum profiles × 65 mm (hammer) | $1.87 [^1] | $1.87 | Hammer top extrusion  |
 | 1 | 1515 aluminum profiles × 135 mm (hammer) | $3.88 [^1] | $3.88 | Hammer side extrusion |
-| 2 | [80×20×2 mm 304 stainless steel baffle](https://www.aliexpress.com/item/1005010219763652.html) | $1.16 | $2.32 | Optional, could be done without, but highly recommended due to strength it provides |
+| 2 | [80×20×2 mm 304 stainless steel baffle](https://www.aliexpress.com/item/1005010219763652.html) | $1.16 | $2.32 | For the base. Optional, could be done without, but highly recommended due to strength it provides |
+| 1 | [70×20×2 mm 304 stainless steel baffle](https://www.aliexpress.com/item/1005010628242895.html) | $4.00 | $4.00 | For the backstop. Optional, also could be done without, but highly recommended due to strength |
 | 1 | [M4x15x15x3mm square nut](https://www.aliexpress.com/item/1005008724571592.html?spm=a2g0o.order_list.order_list_main.181.52d11802MeMOAG) | $0.25 | $0.25 | Technically optional, can be printed instead but highly recommended that you machine it |
 | 1 | [8 mm OD × 200 mm linear shaft with M4 threaded holes](https://www.aliexpress.com/item/1005007982728863.html) | $9.54 | $9.54 | ~7" |
 | 1 | [12 mm OD × 1.2 mm wire × 70 mm compression spring](https://www.aliexpress.com/item/1005005402569008.html) | $0.93 | $0.93 | Main spring |
@@ -38,7 +41,7 @@ Some parts are best bought in bulk, such as the aluminum extrusion and any faste
 | 1 | [M6 × 10 mm × 40 mm hex rod coupling nuts](https://www.aliexpress.com/item/1005006565508071.html) | $1.02 | $1.02 | Optional, pedal connector |
 | 1 | [M6 × 40 mm partially threaded machine screws](https://www.aliexpress.com/item/32860422627.html) | $0.81 | $0.81 | Optional, pedal connector |
 | 1 | [M6 × 20 mm flat head machine screws](https://www.aliexpress.com/item/1005008614137094.html) | $0.56 | $0.56 | Optional, pedal connector |
-| | | | **~\$38.96** | Main list total (CAD) |
+| | | | **~\$42.96** | Main list total (CAD) |
 | | | | **+\$2.39** | With optional pedal connector (CAD) |
 
 

@@ -3,7 +3,7 @@
 ![Overview of 4 thrusters](docs/images/overview.jpeg)
 
 ## Flyball?
-If you don't know flyball, you probably don't need to a flyball box thruster. Flyball is a fast paced team dog sport, it's somewhat of a relay race where four dogs race over jumps, trigger a box to retrieve a ball (shot out by a thuster) and race back while then next dog goes.
+If you don't know flyball, you probably don't need to a flyball box thruster. Flyball is a fast paced team dog sport, it's somewhat of a relay race where four dogs race over jumps, trigger a box to retrieve a ball (shot out by a thruster) and race back while then next dog goes.
 
 Common organizations are [NAFA](https://www.nafaflyball.com/) and [U-FLI](https://u-fli.com/) in North America, [BFA](https://www.flyball.org.uk/) and [UKFL](https://www.ukflyball.org.uk/) in the UK, and there are more in other parts of the world.
 
@@ -28,7 +28,9 @@ Please let me know if you want your name added (or removed) from the above list.
 ## Introduction
 ![Side view](docs/images/side.png)
 
-An **open-source**, **low-cost** [flyball](https://en.wikipedia.org/wiki/Flyball) thruster design aimed at DIY builders. Thrusters are built from a mix of **printed parts** and **off-the-shelf hardware**, with some basic machining required. Printed parts are defined in [OpenSCAD](https://openscad.org/), with some customization available.
+An **open-source**, **low-cost** [flyball](https://en.wikipedia.org/wiki/Flyball) thruster design aimed at DIY builders. This repository covers the **thrusters only**; it does not include any instructions for building a flyball box.
+
+Thrusters are built from a mix of **printed parts** and **off-the-shelf hardware**, with some basic machining required. Printed parts are defined in [OpenSCAD](https://openscad.org/), with some customization available.
 
 The target cost is, currently, approximately **$30 USD** per thruster, excluding tools and printer access.
 
