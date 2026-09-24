@@ -57,7 +57,7 @@ Some parts are best bought in bulk, such as the aluminum extrusion and any faste
 
 ##  Notes
 
-- **Printed parts:** Print all STLs in `models/` from the PETG and TPU allocations above (see [INSTRUCTIONS.md](INSTRUCTIONS.md) for print settings).
+- **Printed parts:** Print all STLs in `models/` from the PETG and TPU allocations above (see [instructions.md](instructions.md) for print settings).
 - **1515 profiles:** Often sold in multi-packs; one pack may cover several thrusters.
 - **Sourcing:** Links are from the original BOM (Overture, Amazon.ca, AliExpress). You can substitute equivalent parts from local or preferred suppliers; confirm dimensions and thread specs (M3/M4/M5/M6) match.
 - **Currency:** Original prices in CAD. USD equivalent is roughly 25–30% less depending on exchange rate.
