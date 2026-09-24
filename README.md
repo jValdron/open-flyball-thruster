@@ -22,7 +22,7 @@ Please let me know if you want your name added (or removed) from the above list.
 
 - **Spare parts.** I would definitely recommend you keep spare parts on hand, and ideally a complete spare thruster, so you can quickly replace failed components.
 
-- **AI-assisted SCAD.** [Cursor](https://cursor.com/) was used to help write and edit the OpenSCAD; the design may contain errors or need iteration.
+- **AI-assisted SCAD.** The original design was completely done in Fusion 360, but at some point I stopped using Fusion and switched to OpenSCAD. [Cursor](https://cursor.com/) was used to help re-write the parts in OpenSCAD; they may contain errors, need iteration or might be sub-optimal.
 
 
 ## Introduction
