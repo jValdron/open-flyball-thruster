@@ -9,7 +9,7 @@ Common organizations are [NAFA](https://www.nafaflyball.com/) and [U-FLI](https:
 
 
 ## Word of Warning
-If you're here, you're most likely looking at building your own thruster. My first word of warning is that you shouldn't. Thrusters are pretty intricate and difficult to get right. Building a box from scratch is a huge task, and thrusters, arguably, are even more difficult to build.
+If you're here, you're most likely looking at building your own thruster. My first word of warning is that you shouldn't. Thrusters are pretty intricate and difficult to get right. Building a box from scratch is a huge task, and thrusters are, arguably, even more difficult to build.
 
 
 - **Not battle-tested.** These thrusters have been used for about a year now, weekly at practice and a half dozen of times at a tournament. They've been working without any issues but we recommend you buy thrusters from established suppliers, for example:
