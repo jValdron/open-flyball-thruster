@@ -16,7 +16,7 @@ I'm sure some people will say something along the lines of "using 3D printed par
 
 | ![Side view](docs/images/assembled.jpeg) | ![Mounted in a box](docs/images/in_box.jpeg) |
 |:---------:|:--------:|
-| Side view | 4 thrusters mounted in a box |
+| Side view | 4 thrusters mounted in a box (first version, no baffles/pedal connector) |
 
 
 ## Flyball?
