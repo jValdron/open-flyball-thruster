@@ -48,7 +48,7 @@ Familiarity with OpenSCAD is helpful if you want to tweak dimensions or part geo
 A more detailed instructions guide can be found under [docs/instructions.md](docs/instructions.md).
 
 ### Assembly Timelapse
-https://github.com/jValdron/open-flyball-thruster/raw/refs/heads/main/docs/images/timelapse.mp4
+https://github.com/user-attachments/assets/54a8cb0c-5971-4721-8ede-dae078966e4b
 
 ## Design
 
