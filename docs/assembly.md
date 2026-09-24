@@ -288,6 +288,6 @@ Mount the thruster with the **4 × M6 × 60 mm** screws and the **4 × M6 nuts**
 
 | ![Mounted thruster](images/mounted.jpeg) |
 |:--:|
-| *Thruster mounted with M6 × 60 mm screws and M6 nuts.* |
+| *Thruster mounted with, what should be, M6 × 60 mm screws and M6 nuts.* |
 
 The next step is to tune the thruster. See [tuning.md](tuning.md).
