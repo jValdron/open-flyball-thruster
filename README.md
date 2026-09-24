@@ -35,6 +35,10 @@ Thrusters are built from a mix of **printed parts** and **off-the-shelf hardware
 The target cost is, currently, approximately **$30 USD** per thruster, excluding tools and printer access.
 
 
+### A Note About 3D Printed Parts
+I'm sure some people will say something along the lines of "using 3D printed parts for something like this is not a good idea". This was engineered in a way where most of the tension and stress will be distributed on metal fasteners and baffles. The important bits are all metal. The printed parts are mostly there to support fasteners/baffles. Some tension/stress will happen on the printed parts, so you should fully expect some parts to break at some point. I cannot stress enough how you should keep a set of spare parts of everything and/or a complete spare thruster on hand.
+
+
 ## Instructions
 This project is for **DIY-ers only**. You should have:
 
