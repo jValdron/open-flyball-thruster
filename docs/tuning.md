@@ -78,8 +78,8 @@ Lock the grub screw and test it.
 
 ### A note about throw distance
 
-**Remember that you only need the thruster to throw the ball 24" (at least in NAFA).** I tend to aim for **~26–28"**. Throwing further than that gives a very negligible increase in speed. In a perfect box turn, the dog already has its mouth around the box as it hits the pedal.
+**Remember that you only need the thruster to throw the ball 24" (at least in NAFA).** I tend to aim for **~26–28"**. Throwing further than that gives a very negligible increase in speed. In a perfect box turn, the dog already has its mouth around the ball as it hits the pedal.
 
-**Making it shoot further will only cause issues with softer dogs or dogs that catches the ball in the air, further from the faceplate.**
+**Making it shoot further will only cause issues with softer dogs or dogs that catches the ball in the air, far from the faceplate.**
 
 If you want to optimize the box for faster turns, **make the pedal more sensitive** so the thruster throws the ball as soon as you touch the pedal and not when it is fully depressed.
