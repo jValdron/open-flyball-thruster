@@ -102,8 +102,8 @@ Affix the plunger to the linear rod: screw the **M4 × 14 mm** countersunk Torx 
 
 You will need:
 
-- Base (`base.stl`) with gasket installed
-- Backstop (`backstop.stl`) with gasket installed
+- Base (`base.stl`) with bushing installed
+- Backstop (`backstop.stl`) with bushing installed
 - **2 ×** 115 mm profile extrusions
 - **2 × 80×20×2 mm** stainless steel baffles
 - **6 × M3** square nuts
@@ -159,7 +159,7 @@ You will need:
 - **M4 × 3 mm** grub screws
 - **2 ×** TPU washers (optional)
 
-Slide the linear rod, **the end without the plunger**, into the main body through the base gasket (see the [backstop picture](#34-backstop) above).
+Slide the linear rod, **the end without the plunger**, into the main body through the base bushing (see the [backstop picture](#34-backstop) above).
 
 Slide the **shaft coupler**, then a **shaft lock collar**, onto the linear rod.
 
@@ -167,7 +167,7 @@ Slide the **shaft coupler**, then a **shaft lock collar**, onto the linear rod.
 |:--:|
 | *Shaft coupler and lock collar slid onto the linear rod.* |
 
-Slide the **70 mm** main spring onto the linear rod, push the rod through the backstop gasket, and add the second **shaft lock collar** on the end past the backstop.
+Slide the **70 mm** main spring onto the linear rod, push the rod through the backstop bushing, and add the second **shaft lock collar** on the end past the backstop.
 
 | ![Spring and end collar](images/linear_rod_spring_collar.jpeg) |
 |:--:|

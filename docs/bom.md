@@ -33,7 +33,7 @@ Some parts are best bought in bulk, such as the aluminum extrusion and any faste
 | 1 | [40×40 mm metal plate disk](https://www.aliexpress.com/item/1005008983416584.html) | $0.56 | $0.56 | |
 | 1 | [8–8 mm shaft coupler](https://www.aliexpress.com/item/1005010151471423.html) | $1.64 | $1.64 | |
 | 4 | [M4 × 3 mm grub screws](https://www.aliexpress.com/item/1005007184737120.html) | $0.14 | $0.55 | |
-| 2 | [M8 T-shaped nylon washer/gasket](https://www.aliexpress.com/item/1005008152448252.html) | $0.20 | $0.40 | |
+| 2 | [M8 T-shaped nylon washer/bushing](https://www.aliexpress.com/item/1005008152448252.html) | $0.20 | $0.40 | |
 | 1 | [M4 × 14 mm countersunk Torx machine screws](https://www.aliexpress.com/item/4001255830388.html) | $0.12 | $0.12 | |
 | 3 | [M3 × 14 mm countersunk Torx machine screws](https://www.aliexpress.com/item/4001255830388.html) | $0.08 | $0.24 | |
 | 8 | [M3 × 6 mm button head machine screws](https://www.aliexpress.com/item/32967225441.html) | $0.05 | $0.43 | |

@@ -14,7 +14,7 @@ Follow these steps to get all parts ready for assembly. Then see [assembly.md](a
   - [4.3 Hammer side extrusion](#43-hammer-side-extrusion-1-piece)
 - [5. Hammer head](#5-hammer-head)
 - [6. Plunger metal plate](#6-plunger-metal-plate)
-- [7. Base and backstop gaskets](#7-base-and-backstop-gaskets)
+- [7. Base and backstop bushings](#7-base-and-backstop-bushings)
   - [7.1 Ensure proper fit](#71-ensure-proper-fit-optional)
 - [8. Backstop baffle](#8-backstop-baffle-optional-but-recommended)
 
@@ -141,27 +141,27 @@ Using the **40×40 mm metal plate disk** from the BOM, drill a **4 mm hole in th
 | *Stock plate (left) and drilled plunger plate (right).* |
 
 
-## 7. Base and backstop gaskets
+## 7. Base and backstop bushings
 
-Add a drop of super glue, then snap-push an **M8 T-shaped nylon washer/gasket** into the `base.stl` part so it does not pop out.
+Add a drop of super glue, then snap-push an **M8 T-shaped nylon washer/bushing** into the `base.stl` part so it does not pop out.
 
-| ![Base gasket](images/base_gasket.jpeg) |
+| ![Base bushing](images/base_bushing.jpeg) |
 |:--:|
-| *M8 T-shaped nylon gasket snap-pushed into the base.* |
+| *M8 T-shaped nylon bushing snap-pushed into the base.* |
 
 Do the same for `backstop.stl`.
 
-| ![Backstop gasket](images/backstop_gasket.jpeg) |
+| ![Backstop bushing](images/backstop_bushing.jpeg) |
 |:--:|
-| *M8 T-shaped nylon gasket snap-pushed into the backstop.* |
+| *M8 T-shaped nylon bushing snap-pushed into the backstop.* |
 
 ### 7.1 Ensure proper fit (optional)
 
-Take a linear rod and check that it can slide nicely through both gaskets. If there is resistance, drill the gasket back and forth with an **8 mm** bit until the linear rod can slide loosely.
+Take a linear rod and check that it can slide nicely through both bushings. If there is resistance, drill the bushing back and forth with an **8 mm** bit until the linear rod can slide loosely.
 
-| ![Drilling a gasket](images/drill_gasket.jpeg) |
+| ![Drilling a bushing](images/drill_bushing.jpeg) |
 |:--:|
-| *Opening up a gasket with an 8 mm bit so the linear rod slides freely.* |
+| *Opening up a bushing with an 8 mm bit so the linear rod slides freely.* |
 
 
 ## 8. Backstop baffle (optional, but recommended)
@@ -175,4 +175,4 @@ Using the **70×20×2 mm 304 stainless steel baffle** from the BOM, enlarge the 
 
 ## Assembly
 
-Once PETG and TPU parts are printed, extrusions, hammer head, plunger plate, gaskets, and optional baffle are machined, and all BOM items are on hand, continue to [assembly.md](assembly.md).
+Once PETG and TPU parts are printed, extrusions, hammer head, plunger plate, bushings, and optional baffle are machined, and all BOM items are on hand, continue to [assembly.md](assembly.md).
