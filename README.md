@@ -26,7 +26,7 @@ Please let me know if you want your name added (or removed) from the above list.
 
 
 ## Introduction
-![Side view](docs/images/side.png)
+![Side view](docs/images/assembled.jpeg)
 
 An **open-source**, **low-cost** [flyball](https://en.wikipedia.org/wiki/Flyball) thruster design aimed at DIY builders. This repository covers the **thrusters only**; it does not include any instructions for building a flyball box.
 
