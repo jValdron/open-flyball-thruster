@@ -4,7 +4,7 @@
 
 ## Intended configuration
 
-This list is sized for a thruster mounted on a double stack of 3/4" plywood (1.5" total) with thinner matting on top. As built, the thruster is quite adjustable, so small differences in board or matting thickness can usually be taken up without changing parts.
+This list is sized for a thruster mounted on a faceplate made of a double stack of 3/4" plywood (1½" total) with thinner matting (~¼") on top. As built, the thruster is quite adjustable, so small differences in board or matting thickness can usually be taken up without changing parts.
 
 If the box is much different from that stack, you will likely need to tweak a few dimensions. The ones that matter most are the linear rod, the main spring, and potentially the extrusion lengths.
 
@@ -44,7 +44,7 @@ Some parts are best bought in bulk, such as the aluminum extrusion and any faste
 | 10 | [M3 square nuts](https://www.aliexpress.com/item/1005009866787243.html) | $0.05 | $0.50 | To fasten parts on the 15x15 extrusion |
 | 1 | [M5 × 25 mm flat Torx machine screws](https://www.aliexpress.com/item/1005002254557923.html) | $0.87 | $0.87 | Hammer/catcher pivot |
 | 1 | [M5 nuts](https://www.aliexpress.com/item/1005007593861199.html) | $0.12 | $0.12 | Hammer/catcher pivot |
-| 4 | [M6 × 60 mm machine screws](https://www.aliexpress.com/item/1005008846077891.html) | $0.59 | $2.38 | Used to mount to the box |
+| 4 | [M6 × 60 mm machine screws](https://www.aliexpress.com/item/1005008846077891.html) | $0.59 | $2.38 | Used to mount to the box, longer/shorter screws might be needed depending on faceplate thickness |
 | 4 | [M6 nuts](https://www.aliexpress.com/item/1005007593861199.html) | $0.15 | $0.60 | Used to mount to the box |
 | 1 | [M6 × 10 mm × 40 mm hex rod coupling nuts](https://www.aliexpress.com/item/1005006565508071.html) | $1.02 | $1.02 | Optional, pedal connector |
 | 1 | [M6 × 40 mm partially threaded machine screws](https://www.aliexpress.com/item/32860422627.html) | $0.81 | $0.81 | Optional, pedal connector |
