@@ -71,10 +71,10 @@ Optionally, you can print hammer head, but it's recommended that you use a metal
 
 ## 3. Print the TPU parts
 
-**Parts:** Plunger and one washer.
+**Parts:** Plunger and, at least, one washer (or two).
 
 - **Plunger:** Print with **100% infill** in TPU.
-- **Washer:** The washer is thin and will likely slice with no infill; it can be printed **alongside the plunger** on the same bed.
+- **Washer:** The washer is thin and will likely slice with no infill. Ideally you could use two of these per thruster, they're used to dampen some of the vibration.
 - **Skirt:** On my printer, I've had to set a minimum of 10 skirt layers to prevent a side of the plunger to lift from the bed.
 - **Reference:** Orientation/layout:
   ![TPU parts print orientation](images/sliced/tpu_parts.png)
