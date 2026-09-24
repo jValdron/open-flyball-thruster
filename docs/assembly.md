@@ -272,17 +272,17 @@ I will not provide full instructions for the box itself. This section only cover
 
 This is **not** an actual flyball box. The board in the photos is just a placeholder to show the mounting procedure. The **M6** screws used here are also not the correct screws: they should be **countersunk** so they do not leave bumps in the matting.
 
-You need a **2 in** hole in the box face for the plunger. A hole saw is the easiest way to cut it.
+You need a **2"** hole in the box face for the plunger. A hole saw is the easiest way to cut it.
 
-| ![2 in hole](images/mount_2in_hole.jpeg) |
+| ![2" hole](images/mount_2in_hole.jpeg) |
 |:--:|
-| *2 in hole cut with a hole saw.* |
+| *2" hole cut with a hole saw.* |
 
-Drill **4 × 6.5 mm** holes, **56 mm × 60 mm** apart, around the 2 in hole. Or simply cut the 2 in hole, put the thruster in place, and mark the 6.5 mm holes from the thruster.
+Drill **4 × 6.5 mm** holes, **56 mm × 60 mm** apart, around the 2" hole. Or simply cut the 2" hole, put the thruster in place, and mark the 6.5 mm holes from the thruster.
 
 | ![6.5 mm mounting holes](images/mount_65_holes.jpeg) |
 |:--:|
-| *Four 6.5 mm holes marked and drilled around the 2 in hole.* |
+| *Four 6.5 mm holes marked and drilled around the 2" hole.* |
 
 Mount the thruster with the **4 × M6 × 60 mm** screws and the **4 × M6 nuts**. The slots in the baffles and base let you shift the thruster a bit: line the plunger up in the middle of the hole, then tighten the nuts.
 
