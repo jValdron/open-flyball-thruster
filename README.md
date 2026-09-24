@@ -44,6 +44,7 @@ This project is for **DIY-ers only**. You should have:
 Familiarity with OpenSCAD is helpful if you want to tweak dimensions or part geometry.
 
 * Obtain the all parts, see [docs/bom.md](docs/bom.md)
+* Get the parts prepared, see [docs/instructions.md](docs/instructions.md)
 * Assemble the thruster, see [docs/assembly.md](docs/assembly.md)
 * Tune as necessary, see [docs/tuning.md](docs/tuning.md)
 
