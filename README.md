@@ -3,10 +3,6 @@
 ![Overview of 4 thrusters](docs/images/overview.jpeg)
 
 ## Introduction
-| ![Side view](docs/images/assembled.jpeg) | ![Mounted in a box](docs/images/in_box.jpeg) |
-|:---------:|:--------:|
-| Side view | 4 thrusters mounted in a box |
-
 An **open-source**, **low-cost** [flyball](https://en.wikipedia.org/wiki/Flyball) thruster design aimed at DIY builders. This repository covers the **thrusters only**; it does not include any instructions for building a flyball box.
 
 Thrusters are built from a mix of **printed parts** and **off-the-shelf hardware**, with some basic machining required. Printed parts are defined in [OpenSCAD](https://openscad.org/), with some customization available.
@@ -16,6 +12,11 @@ The target cost is, currently, approximately **$35 USD** per thruster, excluding
 
 ### A Note About 3D Printed Parts
 I'm sure some people will say something along the lines of "using 3D printed parts for something like this is not a good idea". This was engineered in a way where most of the tension and stress will be distributed on metal fasteners and baffles. The important bits are mostly all metal. The printed parts are mostly there to support fasteners or metal parts. Some tension/stress will happen on the printed parts, so you should fully expect some parts to break at some point.
+
+
+| ![Side view](docs/images/assembled.jpeg) | ![Mounted in a box](docs/images/in_box.jpeg) |
+|:---------:|:--------:|
+| Side view | 4 thrusters mounted in a box |
 
 
 ## Flyball?
