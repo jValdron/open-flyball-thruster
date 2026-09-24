@@ -59,11 +59,11 @@ Gather all items from the [Bill of Materials (BOM.md)](BOM.md). Multiply quantit
 Print all rigid parts from the `parts/` folder that are intended for PETG:
 - `backstop.stl`
 - `base.stl`
-- `hammer_head.stl`
 - `hammer_head_nut.stl`
 - `hammer_holder.stl`
 - `spring_holder.stl`
 - `pedal_connector.stl` (optional)
+- `hammer_head.stl` (not recommended)
 
 
 Optionally, you can print hammer head, but it's recommended that you use a metal part (see Step 5). PETG will wear out very quickly and it will require constant replacement.
