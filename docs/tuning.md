@@ -1,6 +1,6 @@
 # Tuning
 
-Set these in order. Adjust the **plunger position** before you touch the **shaft coupler**.
+Set these in order. Adjust the **plunger position** before you adjust the **rest to loaded travel**.
 
 - [Summary](#summary)
 - [1. Plunger position](#1-plunger-position)
