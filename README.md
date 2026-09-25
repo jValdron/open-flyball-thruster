@@ -9,11 +9,6 @@ Thrusters are built from a mix of **printed parts** and **off-the-shelf hardware
 
 The target cost is, currently, approximately **$35 USD** per thruster, excluding tools and printer access.
 
-
-### A Note About 3D Printed Parts
-I'm sure some people will say something along the lines of "using 3D printed parts for something like this is not a good idea". This was engineered in a way where most of the tension and stress will be distributed on metal fasteners and baffles. The important bits are mostly all metal. The printed parts are mostly there to support fasteners or metal parts. Some tension/stress will happen on the printed parts, so you should fully expect some parts to break at some point.
-
-
 | ![Side view](docs/images/assembled.jpeg) | ![Mounted in a box](docs/images/in_box.jpeg) |
 |:---------:|:--------:|
 | Side view | 4 thrusters mounted in a box (first version, no baffles/pedal connector) |
@@ -33,16 +28,18 @@ If you're here, you're most likely looking at building your own thruster. My fir
 <sub>Please let me know if you would like your name added to or removed from the list above.</sub>
 
 
-The OFTs are:
-- **Not battle-tested.** As of this writing, they haven't been used for more than a year. We've used them weekly at practice and a half dozen of times at various tournaments. They've been working without much issues for us and the last iteration has been pretty solid.
+The OFTs:
+- **are not battle-tested.** As of this writing, they haven't been used for more than a year. We've used them weekly at practice and a half dozen of times at various tournaments. They've been working without much issues for us and the last iteration has been pretty solid.
 
-- **Many small parts.** Since these combine 3D printed parts and metal parts instead of custom machined parts, they contain many more small parts than a machined thruster would, making them more susceptible to breaking.
+- **has many small parts.** Since these combine 3D printed parts and metal parts instead of custom machined parts, they contain many more small parts than a machined thruster would, making them more susceptible to breaking.
 
-- **No support or warranty.** All of the files and instructions provided in this repository are provided as is and with no support or warranty. I am not responsible for any accident, injuries or whatever happens while building or using these.
+- **has 3D printed parts.** Some tension/stress will happen on printed parts, so you should fully expect some parts to break at some point. However, this was engineered in a way where most of the tension and stress will be distributed on metal fasteners and baffles. The important bits are mostly all metal. The printed parts are mostly there to support fasteners or metal parts.
 
-- **Spare parts.** I would definitely recommend you keep spare parts on hand, and ideally a complete spare thruster, so you can quickly replace failed components.
+- **should have spare parts.** I would definitely recommend you keep spare parts on hand, and ideally a complete spare thruster, so you can quickly replace failed components.
 
-- **AI-assisted SCAD.** The original design was completely done in Fusion 360, but at some point I stopped using Fusion and switched to OpenSCAD. [Cursor](https://cursor.com/) was used to help re-write the parts in OpenSCAD; they may contain errors, need iteration or might be sub-optimal.
+- **has no support or warranty.** All of the files and instructions provided in this repository are provided as is and with no support or warranty. I am not responsible for any accident, injuries or whatever happens while building or using these.
+
+- **was built with AI-assisted SCAD.** The original design was completely done in Fusion 360, but at some point I stopped using Fusion and switched to OpenSCAD. [Cursor](https://cursor.com/) was used to help re-write the parts in OpenSCAD; they may contain errors, need iteration or might be sub-optimal.
 
 
 ## Instructions
