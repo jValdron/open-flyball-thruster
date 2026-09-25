@@ -1,5 +1,15 @@
 # open-flyball-thruster (OFT)
 
+## Contents
+- [Introduction](#introduction)
+- [Flyball?](#flyball)
+- [Word of Warning](#word-of-warning)
+- [Instructions](#instructions)
+  - [Assembly Timelapse](#assembly-timelapse)
+- [Design](#design)
+- [Contributions](#contributions)
+- [License](#license)
+
 ![Overview of 4 thrusters](docs/images/overview.jpeg)
 
 ## Introduction
