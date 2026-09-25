@@ -29,9 +29,11 @@ Common organizations are [NAFA](https://www.nafaflyball.com/) and [U-FLI](https:
 If you're here, you're most likely looking at building your own thruster. My first word of warning is that you probably shouldn't. You're better off buying thrusters from established suppliers, for example:
   - **[Jarvis Flyball Box](https://www.flyballbox.ca/)** (Canada)
   - **[Sub 15](https://www.facebook.com/p/Sub-15-61551941167602/)** (UK)
-  - Please let me know if you want your name added (or removed) from the above list.
+  
+<sub>Please let me know if you would like your name added to or removed from the list above.</sub>
 
-These thrusters are:
+
+The OFTs are:
 - **Not battle-tested.** As of this writing, they haven't been used for more than a year. We've used them weekly at practice and a half dozen of times at various tournaments. They've been working without much issues for us and the last iteration has been pretty solid.
 
 - **Many small parts.** Since these combine 3D printed parts and metal parts instead of custom machined parts, they contain many more small parts than a machined thruster would, making them more susceptible to breaking.
