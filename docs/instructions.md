@@ -168,6 +168,8 @@ Take a linear rod and check that it can slide nicely through both bushings. If t
 
 Using the **70×20×2 mm 304 stainless steel baffle** from the BOM, enlarge the **hole in the middle**. A **step drill bit** makes this easy.
 
+If you decide to omit this baffle, I would modify the backstop SCAD by removing the baffle and making it thicker.
+
 | ![Machined backstop baffle](images/backstop_baffle_machined.jpeg) |
 |:--:|
 | *Enlarged center hole seated on the backstop (top) vs stock hole (bottom).* |
