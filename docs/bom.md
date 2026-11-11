@@ -31,6 +31,8 @@ Some parts are best bought in bulk, such as the aluminum extrusion and any faste
 | 1 | [8 mm OD × 0.9 mm wire × 10 mm compression spring](https://www.aliexpress.com/item/1005005402584700.html) | $0.33 | $0.33 | Hammer spring |
 | 2 | [8 mm shaft lock collar (T8)](https://www.aliexpress.com/item/32830905214.html) | $0.52 | $1.05 | |
 | 1 | [40×40 mm metal plate disk](https://www.aliexpress.com/item/1005008983416584.html) | $0.56 | $0.56 | |
+| 1 | [Metal disc glass table top adapter](https://www.aliexpress.com/item/1005012181225090.html) | $1.41 | $1.41 | Optional, plunger disc |
+| 1 | [M4 to M10 × 8 mm converter nut](https://www.aliexpress.com/item/1005007436046737.html) | $0.76 | $0.76 | Optional, plunger disc |
 | 1 | [8–8 mm shaft coupler](https://www.aliexpress.com/item/1005010151471423.html) | $1.64 | $1.64 | |
 | 4 | [M4 × 3 mm grub screws](https://www.aliexpress.com/item/1005007184737120.html) | $0.14 | $0.55 | |
 | 2 | [M8 T-shaped nylon washer/bushing](https://www.aliexpress.com/item/1005008152448252.html) | $0.20 | $0.40 | |
@@ -51,6 +53,7 @@ Some parts are best bought in bulk, such as the aluminum extrusion and any faste
 | 1 | [M6 × 20 mm flat head machine screws](https://www.aliexpress.com/item/1005008614137094.html) | $0.56 | $0.56 | Optional, pedal connector |
 | | | | **~\$48.48** | Main list total (CAD) |
 | | | | **+\$2.39** | With optional pedal connector (CAD) |
+| | | | **+\$2.17** | With optional plunger disc (CAD) |
 
 
 [^1]: **Aluminum extrusion unit cost:** Extrusion is bought in bulk (e.g. a pack of 4 × 1000 mm). The cost/unit shown is the **price per mm** (total pack price ÷ 4000 mm) × the length of that profile.

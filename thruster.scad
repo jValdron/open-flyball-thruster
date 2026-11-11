@@ -82,10 +82,10 @@ linear_shaft_length = 200;
 linear_shaft_extension = 40;
 m4_tap_depth = 15;
 
-plunger_disc_thickness = 0.6;
+plunger_disc_thickness = 8;
 plunger_disc_radius = 20;
 plunger_thickness = 10;
-m4_screw_length = 16;
+m4_screw_length = 20;
 
 // Base plate
 color(petg_color) {
@@ -117,26 +117,33 @@ color(steel_color) {
                     cylinder(h = m4_tap_depth + 1, r = 1.65, $fn = 64);
                 }
             }
+        }
+    }
+}
 
-            // Plunger Disc
-            difference() {
-                cylinder(h = plunger_disc_thickness, r = plunger_disc_radius, $fn = 64);
-                translate([0, 0, -0.5]) {
-                    cylinder(h = 1.6, r = 2.5, $fn = 64);
-                }
+// Plunger and metal disc (disc in base pocket; same transform as plunger)
+module plunger_assembly() {
+    translate([0, -linear_shaft_extension, 0]) {
+        rotate([-90, 0, 0]) {
+            rotate([0, 180, 0]) {
+                children();
             }
         }
     }
 }
 
-// Plunger
 color(tpu_color) {
-    translate([0, -linear_shaft_extension, 0]) {
-        rotate([-90, 0, 0]) {
-            rotate([0, 180, 0]) {
-                translate([0, 0, plunger_disc_thickness]) {
-                    plunger();
-                }
+    plunger_assembly() {
+        plunger();
+    }
+}
+
+color(steel_color) {
+    plunger_assembly() {
+        difference() {
+            cylinder(h = plunger_disc_thickness, r = plunger_disc_radius, $fn = 64);
+            translate([0, 0, -0.5]) {
+                cylinder(h = plunger_disc_thickness + 1, r = 2.5, $fn = 64);
             }
         }
     }
@@ -148,7 +155,7 @@ color(anodized_steel_color) {
     translate([0, -linear_shaft_extension, 0]) {
         rotate([-90, 0, 0]) {
             rotate([0, 180, 0]) {
-                translate([0, 0, plunger_disc_thickness + plunger_thickness]) {
+                translate([0, 0, plunger_thickness]) {
                     rotate([180, 0, 0]) {
                         MetricHexSocketCountersunkHeadScrew(key="M4", l=m4_screw_length);
                     }

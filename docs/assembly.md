@@ -1,6 +1,6 @@
 # Assembly
 
-Gather all items from the [Bill of Materials](bom.md) and prepare the printed parts, extrusions, hammer head, and plunger plate as described in [instructions.md](instructions.md). Then assemble in the order below.
+Gather all items from the [Bill of Materials](bom.md) and prepare the printed parts, extrusions, hammer head, and plunger (metal plate or optional metal disc) as described in [instructions.md](instructions.md). Then assemble in the order below.
 
 - [1. Hammer](#1-hammer)
   - [1.1 Prepare the hammer joint](#11-prepare-the-hammer-joint)
@@ -9,6 +9,8 @@ Gather all items from the [Bill of Materials](bom.md) and prepare the printed pa
   - [1.4 Blind-join the extrusions](#14-blind-join-the-extrusions)
   - [1.5 Attach the hammer head](#15-attach-the-hammer-head)
 - [2. Plunger](#2-plunger)
+  - [2.1 Plunger with metal disc (optional)](#21-plunger-with-metal-disc-optional)
+  - [2.2 Plunger with metal plate (default)](#22-plunger-with-metal-plate-default)
 - [3. Main body](#3-main-body)
   - [3.1 Baffles](#31-baffles)
   - [3.2 Extrusions](#32-extrusions)
@@ -78,12 +80,27 @@ Seat the machined **M4 × 15 × 15 × 3 mm** square nut in the recess on top of 
 
 ## 2. Plunger
 
-You will need:
+Build **one** plunger: either the optional metal disc version ([§2.1](#21-plunger-with-metal-disc-optional)) or the default metal-plate-on-TPU version ([§2.2](#22-plunger-with-metal-plate-default)). Both mount to the linear rod the same way in this section.
+
+You will need either way:
 
 - Plunger (`plunger.stl`)
-- Machined plunger metal plate
 - Linear rod (**8 mm OD × 200 mm**, M4 threaded ends)
 - **1 × M4 × 14 mm** countersunk Torx screw
+
+### 2.1 Plunger with metal disc (optional)
+
+If you machined and glued the metal disc assembly per [instructions.md step 6.1](instructions.md#61-optional-plunger-with-metal-disc), your plunger is already assembled (disc, converter nut, and **40×40 mm** back plate in the TPU cup). Continue with [attach to the linear rod](#attach-to-the-linear-rod) below.
+
+| ![Metal disc plunger assembled](images/plunger_disc_assembly.jpeg) |
+|:--:|
+| *Optional metal disc plunger ready for the M4 screw and linear rod.* |
+
+### 2.2 Plunger with metal plate (default)
+
+You will need:
+
+- Machined **40×40 mm** plunger metal plate (4 mm center hole; see [instructions.md step 6](instructions.md#6-plunger-metal-plate))
 
 Stick the plunger metal plate to the `plunger.stl` TPU part and pass the **M4 × 14 mm** countersunk Torx screw through the plunger.
 
@@ -91,7 +108,9 @@ Stick the plunger metal plate to the `plunger.stl` TPU part and pass the **M4 ×
 |:--:|:--:|
 | *Metal plate on the bottom of the plunger, screw passing through.* | *Countersunk screw seated in the top of the TPU plunger.* |
 
-Affix the plunger to the linear rod: screw the **M4 × 14 mm** countersunk Torx screw into one **threaded end** of the linear rod.
+#### Attach to the linear rod
+
+Screw the **M4 × 14 mm** countersunk Torx screw into one **threaded end** of the linear rod (same for either plunger type).
 
 
 ## 3. Main body

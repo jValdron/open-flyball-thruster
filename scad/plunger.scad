@@ -4,7 +4,15 @@ plunger_fillet = 2;
 plunger_hole_radius = 2;
 m4_flange_radius = 5;
 
-module plunger() {
+// Metal disc seated in base (40 mm diameter × 8 mm thick)
+disc_indent_enabled = true;
+disc_indent_radius = 20;
+disc_indent_depth = 8;
+disc_indent_clearance = 0;
+disc_lip_height = 0.8;
+disc_lip_inward = 0.75;
+
+module plunger(enable_disc_indent = disc_indent_enabled) {
     difference() {
         union() {
             // Main cylinder
@@ -22,6 +30,27 @@ module plunger() {
             // Top flat surface
             translate([0, 0, plunger_thickness - plunger_fillet]) {
                 cylinder(h = plunger_fillet, r = plunger_radius - plunger_fillet, $fn = 64);
+            }
+
+            if (enable_disc_indent) {
+                // Snap lip over disc edge, full width to plunger OD (below base face)
+                translate([0, 0, -disc_lip_height]) {
+                    difference() {
+                        cylinder(h = disc_lip_height, r = plunger_radius, $fn = 64);
+                        cylinder(h = disc_lip_height + 0.2, r = disc_indent_radius - disc_lip_inward, $fn = 64);
+                    }
+                }
+            }
+        }
+
+        if (enable_disc_indent) {
+            // Pocket from base face upward; lip below z=0 is not cut
+            translate([0, 0, 0]) {
+                cylinder(
+                    h = disc_indent_depth + disc_indent_clearance + 0.01,
+                    r = disc_indent_radius + disc_indent_clearance,
+                    $fn = 64
+                );
             }
         }
 

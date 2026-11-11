@@ -14,6 +14,7 @@ Follow these steps to get all parts ready for assembly. Then see [assembly.md](a
   - [4.3 Hammer side extrusion](#43-hammer-side-extrusion-1-piece)
 - [5. Hammer head](#5-hammer-head)
 - [6. Plunger metal plate](#6-plunger-metal-plate)
+  - [6.1 Optional plunger with metal disc](#61-optional-plunger-with-metal-disc)
 - [7. Base and backstop bushings](#7-base-and-backstop-bushings)
   - [7.1 Ensure proper fit](#71-ensure-proper-fit-optional)
 - [8. Backstop baffle](#8-backstop-baffle-optional-but-recommended)
@@ -31,6 +32,8 @@ Follow these steps to get all parts ready for assembly. Then see [assembly.md](a
   - 5.5mm
   - 8mm
   - 9mm
+  - 10mm (optional, for metal disc plunger)
+- 10mm tap (optional, for metal disc plunger)
 - Something to cut aluminum extrusions
   - Mitre saw with a metal blade is a good solution
 - Step drill bit (for enlarging the 70 mm baffle hole)
@@ -73,11 +76,15 @@ Optionally, you can print hammer head, but it's recommended that you use a metal
 
 **Parts:** Plunger and, at least, one washer (or two).
 
-- **Plunger:** Print with **100% infill** in TPU.
-- **Washer:** The washer is thin and will likely slice with no infill. Ideally you could use two of these per thruster, they're used to dampen some of the vibration.
+- **Plunger:** Print with **100% infill** in TPU. You can use this plunger as-is with the thin **40×40 mm metal plate** (see [step 6](#6-plunger-metal-plate)), or optionally build the heavier **metal disc plunger** ([step 6.1](#61-optional-plunger-with-metal-disc)) with the glass-table adapter and converter nut from the [BOM](bom.md).
+- **Washer:** The washer is thin and will likely slice with no infill; it can be printed **alongside the plunger** on the same bed. Ideally use **two** per thruster; they dampen vibration.
 - **Skirt:** On my printer, I've had to set a minimum of 10 skirt layers to prevent a side of the plunger to lift from the bed.
 - **Reference:** Orientation/layout:
   ![TPU parts print orientation](images/sliced/tpu_parts.png)
+
+| ![Plunger with optional metal disc parts](images/sliced/tpu_with_disc_parts.png) |
+|:--:|
+| *TPU plunger with the optional metal disc adapter and 40×40 mm plate (metal disc plunger path).* |
 
 
 ## 4. Aluminum extrusions
@@ -134,11 +141,43 @@ Using the **M4 × 15 × 15 × 3 mm square nut** from the BOM, use a **larger dri
 
 ## 6. Plunger metal plate
 
-Using the **40×40 mm metal plate disk** from the BOM, drill a **4 mm hole in the middle** of the plate.
+Using the **40×40 mm metal plate disk** from the BOM, drill a **4 mm hole in the middle** of the plate. You need this plate for the standard plunger and also as the back plate if you build the optional metal disc plunger ([step 6.1](#61-optional-plunger-with-metal-disc)).
 
 | ![Plunger metal plate](images/plunger_metal_plate.jpeg) |
 |:--:|
 | *Stock plate (left) and drilled plunger plate (right).* |
+
+### 6.1 Optional plunger with metal disc
+
+Instead of only gluing the thin metal plate to the TPU plunger, you can fit the **metal disc glass table top adapter** and **M4 to M10 × 8 mm converter nut** from the [BOM](bom.md) inside the plunger for a heavier, mostly metal face. Assembly is in [assembly.md step 2.1](assembly.md#21-plunger-with-metal-disc-optional); the machining steps are below.
+
+| ![Metal disc and converter nut](images/plunger_disc.jpeg) |
+|:--:|
+| *Glass-table metal disc (right) and M4→M10 converter nut (left).* |
+
+1. **Start the converter nut** — Thread the converter nut into the center of the disc **partway** so it is centered and stable for drilling (do not bottom it out yet).
+
+2. **Pilot hole** — Drill a **~3–4 mm pilot hole** through the disc (use whatever bit you have in that range).
+
+| ![Pilot hole setup](images/plunger_disc_pilot_hole.jpeg) | ![Pilot hole drilled](images/plunger_disc_pilot_hole_drilled.jpeg) |
+|:--:|:--:|
+| *Converter nut started in the disc, ready to drill.* | *Pilot hole drilled through the center.* |
+
+3. **Open the top for M10** — Flip the disc over. With a **10 mm** drill bit, enlarge **only the top side** of the hole. Go slowly and try **not to cut into the existing threads** on the converter-nut side.
+
+4. **Tap M10** — Tap the enlarged top with a **10 mm** tap so the converter nut can thread in fully.
+
+| ![Drilled and tapped for M10](images/plunger_disc_drilled_tapped.jpeg) |
+|:--:|
+| *Top opened and tapped for the converter nut.* |
+
+5. **Lock in the converter nut** — Apply **high-strength threadlocker** and thread the converter nut in **all the way**.
+
+6. **Bond into the TPU plunger** — Put a few drops of **super glue** in the TPU plunger cup, seat the metal disc assembly inside, then glue the **machined 40×40 mm metal plate** on the **back** of the disc (same plate as in [step 6](#6-plunger-metal-plate)).
+
+| ![Finished metal disc plunger](images/plunger_disc_assembly.jpeg) |
+|:--:|
+| *Metal disc, converter nut, and back plate bonded into the TPU plunger.* |
 
 
 ## 7. Base and backstop bushings
@@ -177,4 +216,4 @@ If you decide to omit this baffle, I would modify the backstop SCAD by removing 
 
 ## Assembly
 
-Once PETG and TPU parts are printed, extrusions, hammer head, plunger plate, bushings, and optional baffle are machined, and all BOM items are on hand, continue to [assembly.md](assembly.md).
+Once PETG and TPU parts are printed, extrusions, hammer head, plunger plate (and optional metal disc plunger), bushings, and optional baffle are prepared, and all BOM items are on hand, continue to [assembly.md](assembly.md).
