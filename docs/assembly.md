@@ -84,7 +84,7 @@ Build **one** plunger: either the optional metal disc version ([§2.1](#21-plung
 
 You will need either way:
 
-- Plunger (`plunger.stl`)
+- Plunger (`plunger.stl`, or `plunger_with_disc.stl` for the metal disc version)
 - Linear rod (**8 mm OD × 200 mm**, M4 threaded ends)
 - **1 × M4 × 14 mm** countersunk Torx screw
 

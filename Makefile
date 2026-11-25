@@ -16,8 +16,10 @@
 OPENSCAD ?= openscad
 
 PARTS := backstop base hammer_head hammer_holder hammer_joint \
-         pedal_connector plunger spring_holder washer
-STLS  := $(PARTS:%=models/%.stl) models/hammer_holder_nut.stl
+         pedal_connector spring_holder washer
+# Variants built from one source with -D overrides (rules below)
+VARIANTS := hammer_holder_nut plunger plunger_with_disc
+STLS  := $(PARTS:%=models/%.stl) $(VARIANTS:%=models/%.stl)
 
 # Every part depends on the shared config and libs
 COMMON := scad/config.scad $(wildcard scad/lib/*.scad)
@@ -31,6 +33,14 @@ models/%.stl: scad/%.scad $(COMMON)
 
 models/hammer_holder_nut.stl: scad/hammer_holder.scad $(COMMON)
 	$(OPENSCAD) --hardwarnings -q -D m5_nut_side=true -o $@ $<
+
+# Default plunger: solid TPU, metal plate stuck to the back
+models/plunger.stl: scad/plunger.scad $(COMMON)
+	$(OPENSCAD) --hardwarnings -q -D disc_indent_enabled=false -o $@ $<
+
+# Optional plunger: pocket + snap lip for the 40 mm metal disc
+models/plunger_with_disc.stl: scad/plunger.scad $(COMMON)
+	$(OPENSCAD) --hardwarnings -q -D disc_indent_enabled=true -o $@ $<
 
 check: all check-assembly
 

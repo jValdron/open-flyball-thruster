@@ -77,7 +77,7 @@ Optionally, you can print hammer head, but it's recommended that you use a metal
 
 **Parts:** Plunger and, at least, one washer (or two).
 
-- **Plunger:** Print with **100% infill** in TPU. You can use this plunger as-is with the thin **40×40 mm metal plate** (see [step 6](#6-plunger-metal-plate)), or optionally build the heavier **metal disc plunger** ([step 6.1](#61-optional-plunger-with-metal-disc)) with the glass-table adapter and converter nut from the [BOM](bom.md).
+- **Plunger:** Print with **100% infill** in TPU. Print `plunger.stl` for the standard plunger, or `plunger_with_disc.stl` (cup for the metal disc) for the metal disc plunger. You can use `plunger.stl` as-is with the thin **40×40 mm metal plate** (see [step 6](#6-plunger-metal-plate)), or optionally build the heavier **metal disc plunger** ([step 6.1](#61-optional-plunger-with-metal-disc)) with the glass-table adapter and converter nut from the [BOM](bom.md).
 - **Washer:** The washer is thin and will likely slice with no infill; it can be printed **alongside the plunger** on the same bed. Ideally use **two** per thruster; they dampen vibration.
 - **Skirt:** On my printer, I've had to set a minimum of 10 skirt layers to prevent a side of the plunger to lift from the bed.
 - **Reference:** Orientation/layout:
