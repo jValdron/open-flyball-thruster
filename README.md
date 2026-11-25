@@ -49,7 +49,7 @@ The OFTs:
 
 - **has no support or warranty.** All of the files and instructions provided in this repository are provided as is and with no support or warranty. I am not responsible for any accident, injuries or whatever happens while building or using these.
 
-- **was built with AI-assisted SCAD.** The original design was completely done in Fusion 360, but at some point I stopped using Fusion and switched to OpenSCAD. [Cursor](https://cursor.com/) was used to help re-write the parts in OpenSCAD; they may contain errors, need iteration or might be sub-optimal.
+- **was built with AI-assisted SCAD.** The original design was completely done in Fusion 360, but at some point I stopped using Fusion and switched to OpenSCAD. [Cursor](https://cursor.com/) and [Claude](https://claude.com/) was used to help re-write the parts in OpenSCAD; they may contain errors, need iteration or might be sub-optimal.
 
 
 ## Instructions
