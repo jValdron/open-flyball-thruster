@@ -23,7 +23,7 @@ tpu_color = [0.05, 0.05, 0.05];
 nylon_color = [0.35, 0.35, 0.38];
 
 plate_size = [77.5, 80];
-baffle_width = 19.9;
+baffle_width = 20;
 baffle_x_offset = plate_size[0]/2 - baffle_width/2;
 plate_thickness = 8;
 baffle_thickness = 2;
@@ -66,11 +66,11 @@ pedal_connector_z_offset = 15;
 pedal_connector_m6_bolt_length = 40;
 
 spring_holder_y_offset = 52.5;
-spring_holder_height = 31;
+spring_holder_height = 34;
 spring_holder_thickness = 20;
 spring_holder_screw_length = 30;
-spring_holder_screw_extra_for_nut = 7;
-spring_holder_m3_groove_depth = max(0, -1 * (spring_holder_height - spring_holder_screw_length - spring_holder_screw_extra_for_nut));
+spring_holder_screw_extra_for_nut = 4;
+spring_holder_m3_groove_depth = max(0, spring_holder_height - spring_holder_screw_length + spring_holder_screw_extra_for_nut);  // same formula as spring_holder.scad
 
 hammer_joint_wall = 3;
 hammer_joint_bottom_offset = 6;

@@ -44,7 +44,7 @@ Follow these steps to get all parts ready for assembly. Then see [assembly.md](a
 
 ## 1. Obtain parts from the BOM
 
-Gather all items from the [Bill of Materials (BOM.md)](BOM.md). Multiply quantities by the number of thrusters you are building. Order or source printed materials (PETG, TPU), aluminum profiles, hardware, and any optional items before starting.
+Gather all items from the [Bill of Materials (bom.md)](bom.md). Multiply quantities by the number of thrusters you are building. Order or source printed materials (PETG, TPU), aluminum profiles, hardware, and any optional items before starting.
 
 
 ## 2. Print the solid (PETG) parts
@@ -59,10 +59,11 @@ Gather all items from the [Bill of Materials (BOM.md)](BOM.md). Multiply quantit
 - **Infill:** Around 33%.
 - **Walls:** For strong parts, use at least 5 walls (perimeters).
 
-Print all rigid parts from the `parts/` folder that are intended for PETG:
+Print all rigid parts from the `models/` folder that are intended for PETG:
 - `backstop.stl`
 - `base.stl`
-- `hammer_head_nut.stl`
+- `hammer_joint.stl`
+- `hammer_holder_nut.stl`
 - `hammer_holder.stl`
 - `spring_holder.stl`
 - `pedal_connector.stl` (optional)

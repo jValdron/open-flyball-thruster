@@ -38,7 +38,7 @@ You will need:
 - Machined hammer head (**M4 × 15 × 15 × 3 mm** square nut)
 - **4 × M3 × 6 mm** button head screws
 - **4 × M3** square nuts
-- **1 × M4 × 14 mm** countersunk Torx screw
+- **1 × M3 × 14 mm** countersunk Torx screw
 - **1 × M3 × 25 mm** socket head cap screw
 
 ### 1.1 Prepare the hammer joint
@@ -71,11 +71,11 @@ Join the side extrusion to the top extrusion with the **M3 × 25 mm** socket hea
 
 ### 1.5 Attach the hammer head
 
-Seat the machined **M4 × 15 × 15 × 3 mm** square nut in the recess on top of the hammer joint, over the side extrusion. Countersunk side facing out. Fasten it to the **top of the side extrusion** with the **M4 × 14 mm** countersunk Torx screw so the head sits flush.
+Seat the machined **M4 × 15 × 15 × 3 mm** square nut in the recess on top of the hammer joint, over the side extrusion. Countersunk side facing out. Fasten it to the **top of the side extrusion** with the **M3 × 14 mm** countersunk Torx screw so the head sits flush.
 
 | ![Hammer head attached](images/hammer_joint_head.jpeg) |
 |:--:|
-| *Hammer head (square nut) fastened to the top of the side extrusion with the M4 × 14 mm countersunk screw.* |
+| *Hammer head (square nut) fastened to the top of the side extrusion with the M3 × 14 mm countersunk screw.* |
 
 
 ## 2. Plunger
@@ -127,11 +127,11 @@ You will need:
 - **2 × 80×20×2 mm** stainless steel baffles
 - **6 × M3** square nuts
 - **2 × M3 × 12 mm** button head screws
-- **2 × M4 × 14 mm** countersunk Torx screws (through the baffles, into the extrusions)
+- **2 × M3 × 14 mm** countersunk Torx screws (through the baffles, into the extrusions)
 
 ### 3.1 Baffles
 
-Drop the **80×20×2 mm** baffles into the recesses on the base. Pass an **M4 × 14 mm** countersunk Torx screw through the **middle hole** of each baffle; these screws will thread into the extrusions in the next step.
+Drop the **80×20×2 mm** baffles into the recesses on the base. Pass an **M3 × 14 mm** countersunk Torx screw through the **middle hole** of each baffle; these screws will thread into the extrusions in the next step.
 
 | ![Base baffles](images/main_baffle.jpeg) |
 |:--:|

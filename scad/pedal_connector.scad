@@ -42,7 +42,7 @@ module main_body_outer_polyhedron() {
         [w, w, h],                 [0, w, h]
     ];
     faces = [
-        [0, 1, 2, 3],   // bottom (angled)
+        [3, 2, 1, 0],   // bottom (angled)
         [4, 5, 6, 7],   // top
         [0, 1, 5, 4],   // front y=0
         [1, 2, 6, 5],   // right x=w
@@ -65,7 +65,7 @@ module extrusion_cavity_polyhedron() {
         [extrusion_cavity_size, extrusion_cavity_size, h],  [0, extrusion_cavity_size, h]
     ];
     faces = [
-        [0, 1, 2, 3],   // bottom (angled): CW from below => normal down, outward
+        [3, 2, 1, 0],   // bottom (angled)
         [4, 5, 6, 7],   // top
         [0, 1, 5, 4],   // front y=0
         [1, 2, 6, 5],   // right
