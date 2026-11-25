@@ -97,7 +97,7 @@ When it fires, the rear collar hits the backstop with the full force of the rod,
 
 **Today:** pedal rod → M6 coupling barrel with a jam nut on each side → M6 bolt whose head sits loose in the pedal connector's cage. The pedal pulls the head against the cage's front wall to pull the hammer down; the cage gives free play so the hammer can rise on its own. Adjusting the link length (pedal sensitivity) means unlocking both jam nuts with two 10 mm sockets, turning the bolt, and relocking.
 
-**Goal:** adjust quickly (ideally by hand, between runs) and have it stay put. Not decided yet; options:
+**Goal:** it's set once and rarely touched; when it does need a tweak (e.g. something shifted), it should be a quick single-tool (or no-tool) job instead of two wrenches and two jam nuts, and it must stay put. Not decided yet; options:
 
 - [ ] **A. Thumbwheel in the cage (preferred so far).** Rod from the pedal goes straight into the cage, length set once at the pedal. The "head" becomes a printed knurled thumbwheel (~14 mm across, PETG at 100% infill) with a captive **M6 nyloc nut**; turn it with a finger through the cage's side window.
   - 1 mm per turn (M6 pitch), ~0.2 mm per knurl click; the nyloc holds the setting. No tools, no jam nuts.
