@@ -9,6 +9,7 @@ Numbers marked "from the model" were measured in the SCAD files; check them agai
 - [Backstop: 10 mm thick](#4-backstop-10-mm-thick)
 - [Hammer holders: stronger nut side](#5-hammer-holders-stronger-nut-side)
 - [TPU bumper at the backstop](#6-tpu-bumper-at-the-backstop)
+- [Pedal link: easier adjustment](#7-pedal-link-easier-adjustment)
 
 
 ## 1. Hammer latch (touchy trigger)
@@ -90,3 +91,19 @@ When it fires, the rear collar hits the backstop with the full force of the rod,
 - [ ] New printed part: TPU bumper, 3–4 mm thick (separate STL with its own thickness setting, not the 2 mm washer), between the rear collar and the backstop.
 - [ ] Make it standard in the BOM and assembly docs (the 2 mm washers are currently optional).
 - [ ] Tuning docs: the plunger rest position moves by the bumper thickness; reset the rear collar.
+
+
+## 7. Pedal link: easier adjustment
+
+**Today:** pedal rod → M6 coupling barrel with a jam nut on each side → M6 bolt whose head sits loose in the pedal connector's cage. The pedal pulls the head against the cage's front wall to pull the hammer down; the cage gives free play so the hammer can rise on its own. Adjusting the link length (pedal sensitivity) means unlocking both jam nuts with two 10 mm sockets, turning the bolt, and relocking.
+
+**Goal:** adjust quickly (ideally by hand, between runs) and have it stay put. Not decided yet; options:
+
+- [ ] **A. Thumbwheel in the cage (preferred so far).** Rod from the pedal goes straight into the cage, length set once at the pedal. The "head" becomes a printed knurled thumbwheel (~14 mm across, PETG at 100% infill) with a captive **M6 nyloc nut**; turn it with a finger through the cage's side window.
+  - 1 mm per turn (M6 pitch), ~0.2 mm per knurl click; the nyloc holds the setting. No tools, no jam nuts.
+  - The wheel also slides in the cage, so the free play works exactly as now.
+  - Model: new thumbwheel part; cage redesign (larger side windows for finger access, wheel width instead of the bolt head). The cage inside is 15.2 mm wide, and the nyloc is ~11.5 mm across its corners, so the wheel's walls are thin; check this.
+  - Buy: M6 nyloc nuts, M6 threaded rod (or keep the long bolt from the pedal).
+- [ ] **B. Turnbuckle.** Replace the coupling barrel with one threaded left-hand at one end and right-hand at the other (plus matching rod/bolt). Turning just the barrel changes the length, twice as fast as now. Still needs jam nuts to lock, so still two wrenches. No printed changes.
+- [ ] **C. Nyloc instead of jam nuts.** Use a nyloc on the adjusting end instead of the jam-nut pair. Smallest change, but adjustment is still a 10 mm hex and a wrench.
+- [ ] **Optional with any of the above: M6 rod ends** (female ball joints) at one or both ends. Makes it a true "link" and stops binding when the pedal and hammer swing through different arcs. Only if the link ever feels like it catches.
