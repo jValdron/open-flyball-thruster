@@ -7,6 +7,7 @@
 - [Instructions](#instructions)
   - [Assembly Timelapse](#assembly-timelapse)
 - [Design](#design)
+- [Building STLs](#building-stls)
 - [Contributions](#contributions)
 - [License](#license)
 
@@ -82,6 +83,29 @@ This is a fairly standard flyball thruster. A **main spring** on a **linear rod*
 | ![Side view](docs/images/renders/side.png) | ![Top view](docs/images/renders/top.png) | ![Bottom view](docs/images/renders/bottom.png) |
 |:---------:|:--------:|:-----------:|
 | Side view | Top view | Bottom view |
+
+
+## Building STLs
+Ready-to-print STLs are in [`models/`](models/); you only need this if you change the OpenSCAD files in [`scad/`](scad/).
+
+Shared dimensions (plate, extrusions, baffles, fasteners, bushings, etc.) are in [`scad/config.scad`](scad/config.scad). Values only one part uses live in that part's file. Some useful knobs:
+
+- `bushing_fit_clearance`: extra clearance (per side, mm) for the nylon bushings in the base and backstop. Defaults to `0` (press fit); bump it to ~0.05–0.15 if your bushings are too tight to push in.
+- `disc_indent_enabled` (in `scad/plunger.scad`): plain plunger vs. metal disc cup. Both variants are built automatically.
+
+Requirements: [OpenSCAD](https://openscad.org/) (a recent [development snapshot](https://openscad.org/downloads.html#snapshots) is recommended), `make` and Python 3.
+
+| Command | What it does |
+|---|---|
+| `make` | Re-exports any STL in `models/` whose sources changed |
+| `make -B` | Re-exports every STL |
+| `make check` | Builds all parts and checks the `thruster.scad` assembly; fails on any OpenSCAD warning |
+| `make verify` | Rebuilds every STL and fails if its geometry differs from the committed one |
+| `make bolts` | Downloads the [BOLTS](https://github.com/boltsparts/BOLTS) library (screws/nuts in `thruster.scad`) into `.bolts/` |
+
+`thruster.scad` is the full assembly preview; it is not printed. It needs BOLTS: either run `make bolts` or install BOLTS in your OpenSCAD library folder.
+
+CI runs `make verify` and `make check-assembly` on every push, so commit the regenerated `models/` along with any `scad/` change.
 
 
 ## Contributions
