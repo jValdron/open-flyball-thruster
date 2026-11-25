@@ -47,14 +47,21 @@ m3_groove_diameter = 6.5;   // counterbore for M3 button / socket heads
 
 // ---------------------------------------------------------------------------
 // Linear rod, bushings, collars, springs
-linear_shaft_hole_radius = 5;       // bore in base and backstop for the T-bushing body
-linear_shaft_groove_depth = 2;      // T-bushing flange recess in the backstop
-
 t_bushing_id = 8;
 t_bushing_flange_od = 16;
 t_bushing_flange_thickness = 3;
 t_bushing_body_od = 10;
 t_bushing_body_height = 5;
+
+// Extra radius (per side, mm) added to the bushing bores in the base and
+// backstop and to the flange recess in the backstop. 0 = exact size, which
+// relies on PETG printing holes slightly undersize for a press fit. Increase
+// (e.g. 0.05–0.15) if the bushings are too tight to push in on your printer.
+bushing_fit_clearance = 0;
+
+linear_shaft_hole_radius = t_bushing_body_od / 2 + bushing_fit_clearance;     // bore for the T-bushing body (base + backstop)
+linear_shaft_groove_radius = t_bushing_flange_od / 2 + bushing_fit_clearance; // T-bushing flange recess (backstop)
+linear_shaft_groove_depth = 2;      // T-bushing flange recess depth in the backstop
 
 stop_collar_id = 8;
 stop_collar_od = 14;

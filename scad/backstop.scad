@@ -7,8 +7,6 @@ backstop_width = distance_between_outside_faces_of_extrusions;
 
 extrusion_groove_size = extrusion_size + 0.1;
 
-linear_shaft_groove_radius = t_bushing_flange_od / 2;
-
 module backstop() {
     difference() {
         // Main body
