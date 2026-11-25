@@ -1,9 +1,6 @@
 // Collars and shaft couplings for linear rods
+include <../config.scad>
 
-stop_collar_id = 8;
-stop_collar_od = 14;
-stop_collar_thickness = 7;
-m4_tap_radius = 1.65;
 m4_grub_screw_length = 5;
 
 module m4_grub_screw(length = m4_grub_screw_length) {
@@ -35,10 +32,6 @@ module stop_collar(
 }
 
 // Shaft coupling (e.g. T8: 8mm ID, 14mm OD)
-shaft_coupling_id = 8;
-shaft_coupling_od = 14;
-shaft_coupling_length = 22;
-
 module shaft_coupling(
     id = shaft_coupling_id,
     od = shaft_coupling_od,

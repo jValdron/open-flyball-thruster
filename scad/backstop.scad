@@ -1,21 +1,13 @@
+include <config.scad>
+
 backstop_height = 25;
-backstop_thickness = 8;
 corner_radius = 5;
 
-plate_size = [77.5, 80];
-baffle_width = 20;
-extrusion_size = 15;
-
-extrusion_center_offset = plate_size[0] / 2 - baffle_width / 2;
-backstop_width = 2 * extrusion_center_offset + extrusion_size;
+backstop_width = distance_between_outside_faces_of_extrusions;
 
 extrusion_groove_size = extrusion_size + 0.1;
-extrusion_groove_depth = 1;
 
-linear_shaft_hole_radius = 5;
-linear_shaft_groove_radius = 8;
-linear_shaft_groove_depth = 2;
-m3_hole_radius = 3.2 / 2;
+linear_shaft_groove_radius = t_bushing_flange_od / 2;
 
 module backstop() {
     difference() {

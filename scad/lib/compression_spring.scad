@@ -1,14 +1,12 @@
 // Compression spring: axis along Z, centered at origin
 // OD = outer diameter, wire_d = wire diameter, length = free length
-
-compression_spring_od = 12;
-compression_spring_wire_d = 1.2;
-compression_spring_length = 70;
+// Defaults to the main spring.
+include <../config.scad>
 
 module compression_spring(
-    od = compression_spring_od,
-    wire_d = compression_spring_wire_d,
-    length = compression_spring_length
+    od = main_spring_od,
+    wire_d = main_spring_wire_d,
+    length = main_spring_length
 ) {
     coil_radius = (od - wire_d) / 2;
     pitch = wire_d * 2.5;

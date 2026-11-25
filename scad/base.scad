@@ -1,18 +1,6 @@
+include <config.scad>
 use <lib/baffle.scad>
 
-plate_size = [77.5, 80];
-plate_thickness = 8;
-
-baffle_length = 80;
-baffle_width = 20;
-baffle_thickness = 2;
-baffle_slot_width = 6.5;
-baffle_slot_length = 15;
-baffle_edge_offset = 2;
-baffle_partial_arc_radius = 20;
-
-linear_shaft_hole_radius = 5;
-baffle_center_hole_radius = 1.6;
 m3_countersink_head_radius = 3;
 m3_countersink_depth = 2;
 
@@ -58,7 +46,7 @@ module base() {
             translate([baffle_x, 0, 0]) {
                 rotate([0, 0, 90]) {
                     baffle_holes(
-                        center_hole_radius = baffle_center_hole_radius,
+                        center_hole_radius = m3_hole_radius,
                         slot_width = baffle_slot_width,
                         slot_length = baffle_slot_length,
                         edge_offset = baffle_edge_offset,
@@ -70,7 +58,7 @@ module base() {
 
             // Baffle center hole chamfer
             translate([baffle_x, 0, -0.5]) {
-                cylinder(h = m3_countersink_depth + 1, r1 = m3_countersink_head_radius, r2 = baffle_center_hole_radius, $fn = 64);
+                cylinder(h = m3_countersink_depth + 1, r1 = m3_countersink_head_radius, r2 = m3_hole_radius, $fn = 64);
             }
         }
     }

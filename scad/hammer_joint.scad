@@ -1,22 +1,11 @@
+include <config.scad>
 use <lib/utils.scad>
 
-extrusion_size = 15;
-
-hammer_head_height = 6;
-hammer_head_height_offset = 4.5;
-hammer_top_extrusion_offset = 3;
-
-hammer_joint_wall = 3;
-hammer_joint_bottom_offset = 6;
-hammer_joint_right_offset = 8;
 hammer_joint_corner_radius = 3;
+hammer_joint_m3_groove_depth = 0.5;
 
-m3_hole_radius = 3.2 / 2;
-m3_groove_diameter = 6.5;
-m3_groove_depth = 0.5;
-
-top_z = hammer_joint_bottom_offset + extrusion_size + hammer_top_extrusion_offset + hammer_joint_wall + hammer_head_height_offset;
-top_edge_y_max = extrusion_size + hammer_joint_wall * 2;
+top_z = hammer_joint_head_seat_z + hammer_head_height_offset;
+top_edge_y_max = hammer_joint_width;
 
 module top_edge_fillet(r, length, quadrant_y) {
     intersection() {
@@ -68,13 +57,13 @@ module hammer_joint() {
             translate([extrusion_size / 2, -0.01, side_hole_z]) {
                 rotate([-90, 0, 0]) {
                     cylinder(h = hammer_joint_wall + 0.02, r = m3_hole_radius, $fn = 32);
-                    cylinder(h = m3_groove_depth + 0.01, r = m3_groove_diameter / 2, $fn = 32);
+                    cylinder(h = hammer_joint_m3_groove_depth + 0.01, r = m3_groove_diameter / 2, $fn = 32);
                 }
             }
             translate([extrusion_size / 2, top_edge_y_max + 0.01, side_hole_z]) {
                 rotate([90, 0, 0]) {
                     cylinder(h = hammer_joint_wall + 0.02, r = m3_hole_radius, $fn = 32);
-                    cylinder(h = m3_groove_depth + 0.01, r = m3_groove_diameter / 2, $fn = 32);
+                    cylinder(h = hammer_joint_m3_groove_depth + 0.01, r = m3_groove_diameter / 2, $fn = 32);
                 }
             }
         }
@@ -104,13 +93,13 @@ module hammer_joint() {
                 translate([hammer_joint_right_offset / 2, -0.01, extrusion_size / 2]) {
                     rotate([-90, 0, 0]) {
                         cylinder(h = hammer_joint_wall + 0.02, r = m3_hole_radius, $fn = 32);
-                        cylinder(h = m3_groove_depth + 0.01, r = m3_groove_diameter / 2, $fn = 32);
+                        cylinder(h = hammer_joint_m3_groove_depth + 0.01, r = m3_groove_diameter / 2, $fn = 32);
                     }
                 }
                 translate([hammer_joint_right_offset / 2, top_edge_y_max + 0.01, extrusion_size / 2]) {
                     rotate([90, 0, 0]) {
                         cylinder(h = hammer_joint_wall + 0.02, r = m3_hole_radius, $fn = 32);
-                        cylinder(h = m3_groove_depth + 0.01, r = m3_groove_diameter / 2, $fn = 32);
+                        cylinder(h = hammer_joint_m3_groove_depth + 0.01, r = m3_groove_diameter / 2, $fn = 32);
                     }
                 }
             }

@@ -1,25 +1,11 @@
-plate_size = [77.5, 80];
-baffle_width = 20;
-extrusion_size = 15;
+include <config.scad>
+use <lib/utils.scad>
 
-extrusion_center_offset = plate_size[0] / 2 - baffle_width / 2;
-distance_between_outside_faces_of_extrusions = 2 * extrusion_center_offset + extrusion_size;
-
-hammer_extrusion_play = 1;
-m3_hole_radius = 3.2 / 2;
-m3_groove_diameter = 6.5;
-
-spring_holder_height = 34;
-spring_holder_thickness = 20;
 spring_holder_top_wall = 8;
 spring_holder_corner_radius = 10;
 spring_holder_cutout_corner_radius = spring_holder_corner_radius;
 spring_groove_size = 9;
 spring_groove_depth = 2.5;
-spring_holder_screw_length = 30;
-spring_holder_screw_extra_for_nut = 4;
-
-use <lib/utils.scad>
 
 module spring_holder(height = spring_holder_height) {
     w = distance_between_outside_faces_of_extrusions;
@@ -28,8 +14,7 @@ module spring_holder(height = spring_holder_height) {
     cut_height = height - spring_holder_top_wall;
     cut_x = (w - cut_width) / 2;
     cr = spring_holder_cutout_corner_radius;
-    screw_groove_depth = max(0, (height - spring_holder_screw_length + spring_holder_screw_extra_for_nut));
-    echo(screw_groove_depth);
+    screw_groove_depth = spring_holder_m3_groove_depth(height);
 
     difference() {
         linear_extrude(height = spring_holder_thickness) {

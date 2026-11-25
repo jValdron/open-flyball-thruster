@@ -1,17 +1,8 @@
 // Baffle Library
-// Configurable parameters with defaults from base.scad
+include <../config.scad>
 
-// Baffle dimensions
-baffle_length = 80;
-baffle_width = 19.9;
-baffle_partial_arc_radius = 20;
-baffle_thickness = 2;
-
-// Baffle hole parameters
+// Centre hole of the steel baffle itself (the base passes its own M3 radius)
 baffle_center_hole_radius = 3.25;
-baffle_slot_width = 6.5;
-baffle_slot_length = 15;
-baffle_edge_offset = 2;
 
 module rounded_slot(length, width) {
     slot_radius = width / 2;
@@ -28,7 +19,7 @@ module rounded_slot(length, width) {
 // Baffle shape (2D profile)
 module baffle_shape(
     length = baffle_length,
-    width = baffle_width,
+    width = baffle_profile_width,
     arc_radius = baffle_partial_arc_radius
 ) {
     union() {
@@ -56,7 +47,7 @@ module baffle_holes(
     slot_length = baffle_slot_length,
     edge_offset = baffle_edge_offset,
     length = baffle_length,
-    width = baffle_width,
+    width = baffle_profile_width,
     height = 10 // Default height for holes
 ) {
     // Center hole
@@ -86,7 +77,7 @@ module baffle_holes(
 // Complete baffle (3D solid)
 module baffle(
     length = baffle_length,
-    width = baffle_width,
+    width = baffle_profile_width,
     arc_radius = baffle_partial_arc_radius,
     thickness = baffle_thickness,
     center_hole_radius = baffle_center_hole_radius,

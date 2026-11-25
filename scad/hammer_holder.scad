@@ -1,20 +1,8 @@
-hammer_holder_wall = 6;
-hammer_holder_depth = 12;
-hammer_extrusion_play = 1;
-hardware_holder_height = 14;
+include <config.scad>
+use <lib/utils.scad>
+
 corner_radius = hammer_holder_wall / 2;
-inner_corner_radius = 5;
-
-plate_size = [77.5, 80];
-baffle_width = 20;
-extrusion_size = 15;
-
-extrusion_center_offset = plate_size[0] / 2 - baffle_width / 2;
-distance_between_outside_faces_of_extrusions = 2 * extrusion_center_offset + extrusion_size;
-
-m3_hole_radius = 3.2 / 2;
-m3_groove_diameter = 6.5;
-m3_groove_depth = 1;
+inner_corner_radius = hammer_holder_inner_corner_radius;
 
 m5_hole_radius = 5.2 / 2;
 m5_groove_diameter = 10;
@@ -25,11 +13,9 @@ m5_nut_side = false;
 m5_nut_flat = 8;
 m5_nut_depth = 4;
 
-use <lib/utils.scad>
-
 module hammer_holder(nut_side = undef) {
     _m5_nut = (nut_side != undef) ? nut_side : m5_nut_side;
-    extra_width_required = extrusion_center_offset - extrusion_size - hammer_holder_wall - hammer_extrusion_play / 2;
+    extra_width_required = hammer_holder_extra_width;
     total_width = hammer_holder_wall + extrusion_size + extra_width_required + hammer_holder_wall;
     total_height = extrusion_size + hammer_holder_wall + hardware_holder_height;
 
@@ -80,7 +66,7 @@ module hammer_holder(nut_side = undef) {
             translate(hole[0])
                 rotate(hole[1]) {
                     cylinder(h = hammer_holder_depth + 1, r = m3_hole_radius, center = true, $fn = 32);
-                    cylinder(h = m3_groove_depth, d = m3_groove_diameter, $fn = 48);
+                    cylinder(h = hammer_holder_m3_groove_depth, d = m3_groove_diameter, $fn = 48);
                 }
         }
         // M5 through hole + groove (screw head or nut hex)

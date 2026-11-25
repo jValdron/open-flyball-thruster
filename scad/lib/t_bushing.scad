@@ -1,10 +1,5 @@
 // T-shaped nylon bushing (e.g. TW-810/M8 style): flange + central body, 8mm bore
-
-t_bushing_id = 8;
-t_bushing_flange_od = 16;
-t_bushing_flange_thickness = 3;
-t_bushing_body_od = 10;
-t_bushing_body_height = 5;
+include <../config.scad>
 
 module t_bushing(
     id = t_bushing_id,

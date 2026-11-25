@@ -1,10 +1,5 @@
-extrusion_size = 15;
-hammer_size_extrusion_tolerance = 0.1;
-hammer_side_extrusion_length = 135;
-hammer_side_extrusion_short_length = 125;
+include <config.scad>
 
-pedal_connector_height = 20;
-pedal_connector_wall = 2;
 pedal_connector_bottom_wall = 6;
 pedal_connector_bolt_cage_length = 12;
 pedal_connector_bolt_cage_front_opening_x = 8.5;
@@ -14,18 +9,10 @@ pedal_connector_bolt_cage_window_width = 8;
 pedal_connector_bolt_cage_window_height = 8;
 pedal_connector_bolt_cage_window_corner_radius = 1.5;
 
-pedal_connector_m3_hole_diameter = 3.2;
-pedal_connector_m3_groove_diameter = 6.5;
 pedal_connector_m3_groove_depth = 2.5;
 
-hammer_side_cut_rise = hammer_side_extrusion_length - hammer_side_extrusion_short_length;
-hammer_side_cut_angle = atan(hammer_side_cut_rise / extrusion_size);
-
-pedal_connector_outer = extrusion_size + 2 * pedal_connector_wall;
-extrusion_cavity_size = extrusion_size + 2 * hammer_size_extrusion_tolerance;
-extrusion_cavity_offset = (pedal_connector_outer - extrusion_cavity_size) / 2;
-pedal_connector_total_height = pedal_connector_height + hammer_side_cut_rise;
-pedal_connector_bolt_cage_bottom_z = (hammer_side_cut_rise / extrusion_size) * pedal_connector_outer;
+extrusion_cavity_size = pedal_connector_cavity_size;
+extrusion_cavity_offset = pedal_connector_cavity_offset;
 pedal_connector_bottom_wall_z = pedal_connector_bottom_wall / cos(hammer_side_cut_angle);
 
 // Main body outer shell: box with angled bottom, same idea as cavity but size = outer and floor at z=0.
@@ -107,13 +94,13 @@ module pedal_connector() {
 
             hole_xy = pedal_connector_outer / 2;
             translate([hole_xy, hole_xy, -0.01]) {
-                cylinder(h = pedal_connector_total_height + 0.02, d = pedal_connector_m3_hole_diameter, $fn = 32);
+                cylinder(h = pedal_connector_total_height + 0.02, d = m3_hole_diameter, $fn = 32);
             }
             groove_z_start = (hammer_side_cut_rise / extrusion_size) * hole_xy;
             translate([hole_xy, hole_xy, -0.01]) {
                 cylinder(
                     h = groove_z_start + pedal_connector_m3_groove_depth + 0.01,
-                    d = pedal_connector_m3_groove_diameter,
+                    d = m3_groove_diameter,
                     $fn = 48
                 );
             }
@@ -123,7 +110,7 @@ module pedal_connector() {
         translate([0, extrusion_cavity_offset + extrusion_cavity_size, pedal_connector_bolt_cage_bottom_z]) {
             bolt_cage_x = pedal_connector_outer;
             bolt_cage_y = pedal_connector_bolt_cage_length + pedal_connector_wall;
-            bolt_cage_z = pedal_connector_total_height - pedal_connector_bolt_cage_bottom_z;
+            bolt_cage_z = pedal_connector_bolt_cage_z;
             w = pedal_connector_wall;
             difference() {
                 cube([bolt_cage_x, bolt_cage_y, bolt_cage_z]);

@@ -1,5 +1,6 @@
+include <config.scad>
+
 plunger_radius = 24;
-plunger_thickness = 10;
 plunger_fillet = 2;
 plunger_hole_radius = 2;
 m4_flange_radius = 5;

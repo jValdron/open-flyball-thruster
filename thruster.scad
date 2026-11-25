@@ -1,3 +1,5 @@
+include <scad/config.scad>
+
 use <scad/lib/makerbeam.scad>
 use <scad/lib/baffle.scad>
 use <scad/lib/collars.scad>
@@ -15,6 +17,9 @@ use <scad/hammer_head.scad>
 use <scad/spring_holder.scad>
 use <scad/pedal_connector.scad>
 
+// Shared dimensions come from scad/config.scad. Values below only affect
+// where things are placed in this assembly view.
+
 petg_color = [0.929, 0.0, 0.549];
 extrusion_color = [0.12, 0.12, 0.12];
 steel_color = [0.65, 0.65, 0.7];
@@ -22,61 +27,19 @@ anodized_steel_color = [0.15, 0.15, 0.15];
 tpu_color = [0.05, 0.05, 0.05];
 nylon_color = [0.35, 0.35, 0.38];
 
-plate_size = [77.5, 80];
-baffle_width = 20;
-baffle_x_offset = plate_size[0]/2 - baffle_width/2;
-plate_thickness = 8;
-baffle_thickness = 2;
-
-extrusion_length = 115;
-hammer_top_extrusion_length = 65;
-extrusion_groove_depth = 1;
-extrusion_size = 15;
-
-extrusion_center_offset = plate_size[0] / 2 - baffle_width / 2;
-distance_between_outside_faces_of_extrusions = 2 * extrusion_center_offset + extrusion_size;
-
-main_spring_od = 12;
-main_spring_wire_d = 1.2;
-main_spring_length = 70;
-
-hammer_spring_od = 8;
-hammer_spring_wire_d = 0.9;
-hammer_spring_length = 10;
-
-hammer_holder_depth = 12;
 hammer_holder_backstop_offset = 8;
-hammer_holder_wall = 6;
 hammer_holder_x_offset = extrusion_size / 2 + hammer_holder_wall;
-hardware_holder_height = 14;
 hammer_holder_total_height = extrusion_size + hammer_holder_wall + hardware_holder_height;
 hammer_holder_clearance_below_center = 10;
 hammer_holder_z_offset = hammer_holder_total_height / 2 + hammer_holder_clearance_below_center;
-hammer_holder_m3_groove_depth = 1;
-hammer_holder_inner_corner_radius = 5;
-hammer_extrusion_play = 1;
-hammer_holder_extra_width = extrusion_center_offset - extrusion_size - hammer_holder_wall - hammer_extrusion_play / 2;
-hammer_top_extrusion_offset = 3;
 hammer_top_extrusion_m5_through_hole_d = 6.5;
 hammer_top_extrusion_spring_holder_hole_d = 9;
 hammer_top_extrusion_spring_holder_hole_offset = 20;
-hammer_side_extrusion_length = 135;
-hammer_side_extrusion_short_length = 125;
 pedal_connector_z_offset = 15;
 pedal_connector_m6_bolt_length = 40;
+pedal_connector_m6_head_inset = 6;  // M6 head position past the end of the extrusion cavity
 
 spring_holder_y_offset = 52.5;
-spring_holder_height = 34;
-spring_holder_thickness = 20;
-spring_holder_screw_length = 30;
-spring_holder_screw_extra_for_nut = 4;
-spring_holder_m3_groove_depth = max(0, spring_holder_height - spring_holder_screw_length + spring_holder_screw_extra_for_nut);  // same formula as spring_holder.scad
-
-hammer_joint_wall = 3;
-hammer_joint_bottom_offset = 6;
-hammer_joint_right_offset = 8;
-hammer_head_height_offset = 4.5;
-hammer_head_height = 6;
 
 linear_shaft_length = 200;
 linear_shaft_extension = 40;
@@ -84,7 +47,6 @@ m4_tap_depth = 15;
 
 plunger_disc_thickness = 8;
 plunger_disc_radius = 20;
-plunger_thickness = 10;
 m4_screw_length = 20;
 
 // Base plate
@@ -95,7 +57,6 @@ color(petg_color) {
 }
 
 // T-bushing in base plate
-t_bushing_flange_thickness = 3;
 color(nylon_color) {
     translate([0, plate_thickness + t_bushing_flange_thickness, 0]) {
         rotate([90, 0, 0]) {
@@ -166,11 +127,7 @@ color(anodized_steel_color) {
 }
 
 // Backstop
-backstop_thickness = 8;
-linear_shaft_groove_depth = 2;
 backstop_y = extrusion_length + plate_thickness * 2 - extrusion_groove_depth;
-stop_collar_thickness = 7;
-stop_collar_od = 14;
 spring_stop_collar_y = 55;
 shaft_coupling_y = 30;
 
@@ -183,8 +140,6 @@ color(petg_color) {
 }
 
 // T-bushing in backstop groove
-t_bushing_body_height = 5;
-bushing_length = t_bushing_flange_thickness + t_bushing_body_height;
 color(nylon_color) {
     translate([0, backstop_y - backstop_thickness - linear_shaft_groove_depth, 0]) {
         rotate([-90, 0, 0]) {
@@ -194,9 +149,7 @@ color(nylon_color) {
 }
 
 // Main compression spring
-backstop_bushing_front_y = backstop_y - backstop_thickness - linear_shaft_groove_depth + bushing_length;
 spring_collar_face_y = spring_stop_collar_y + stop_collar_thickness / 2;
-spring_length = backstop_bushing_front_y - spring_collar_face_y;
 
 color(steel_color) {
     translate([0, spring_collar_face_y, 0]) {
@@ -245,9 +198,6 @@ color(anodized_steel_color) {
 }
 
 // Shaft coupling on linear rod
-shaft_coupling_od = 14;
-shaft_coupling_length = 22;
-
 color(steel_color) {
     translate([0, shaft_coupling_y, 0]) {
         rotate([-90, -45, 0]) {
@@ -307,7 +257,7 @@ color(steel_color) {
             for (hole_x = [extrusion_size / 2, distance_between_outside_faces_of_extrusions - extrusion_size / 2]) {
                 translate([hole_x, spring_holder_height, spring_holder_thickness / 2]) {
                     rotate([90, 0, 0]) {
-                        translate([0, 0, spring_holder_m3_groove_depth]) {
+                        translate([0, 0, spring_holder_m3_groove_depth()]) {
                             MetricHexSocketHeadCapScrew(key="M3", l=spring_holder_screw_length);
                         }
                     }
@@ -373,10 +323,9 @@ translate([0, hammer_top_extrusion_start_y, hammer_top_extrusion_z - 5]) {
                         difference() {
                             makerbeam_xl_1515(hammer_side_extrusion_length);
                             // End chamfer: rotated-cube wedge at one end
-                            hammer_side_cut_rise = hammer_side_extrusion_length - hammer_side_extrusion_short_length;
                             half = extrusion_size / 2;
                             translate([-half, -half, hammer_side_extrusion_short_length]) {
-                                rotate([atan(hammer_side_cut_rise / extrusion_size), 0, 0]) {
+                                rotate([hammer_side_cut_angle, 0, 0]) {
                                     cube([extrusion_size, extrusion_size * 2, hammer_side_cut_rise]);
                                 }
                             }
@@ -387,41 +336,21 @@ translate([0, hammer_top_extrusion_start_y, hammer_top_extrusion_z - 5]) {
 
             // Pedal connector
             color(petg_color) {
-                pedal_connector_outer = extrusion_size + 2 * 2;  // match pedal_connector.scad wall
-                translate([
-                    pedal_connector_outer / 2,
-                    hammer_side_extrusion_y + pedal_connector_outer / 2,
-                    hammer_side_extrusion_start_z - hammer_side_extrusion_short_length - pedal_connector_z_offset
-                ]) {
-                    rotate([0, 0, 180]) {
-                        pedal_connector();
-                    }
+                pedal_connector_placed(hammer_side_extrusion_y, hammer_side_extrusion_start_z) {
+                    pedal_connector();
                 }
             }
 
             // M6 bolt in pedal connector bolt cage
-            _pc_outer = extrusion_size + 2 * 2;
-            _pc_cavity_off = (_pc_outer - (extrusion_size + 2 * 0.1)) / 2;
-            _pc_cavity_sz = extrusion_size + 2 * 0.1;
-            _pc_cage_bottom_z = (hammer_side_extrusion_length - hammer_side_extrusion_short_length) / extrusion_size * _pc_outer;
-            _pc_cage_z = (20 + (hammer_side_extrusion_length - hammer_side_extrusion_short_length)) - _pc_cage_bottom_z;
-            _pc_m6_head_y = _pc_cavity_off + _pc_cavity_sz + 2 + 4;
-
             color(steel_color) {
-                translate([
-                    _pc_outer / 2,
-                    hammer_side_extrusion_y + _pc_outer / 2,
-                    hammer_side_extrusion_start_z - hammer_side_extrusion_short_length - pedal_connector_z_offset
-                ]) {
-                    rotate([0, 0, 180]) {
-                        translate([
-                            _pc_outer / 2,
-                            _pc_m6_head_y,
-                            _pc_cage_bottom_z + _pc_cage_z / 2
-                        ]) {
-                            rotate([-90, 0, 0]) {
-                                MetricHexSocketHeadCapScrew(key="M6", l=pedal_connector_m6_bolt_length);
-                            }
+                pedal_connector_placed(hammer_side_extrusion_y, hammer_side_extrusion_start_z) {
+                    translate([
+                        pedal_connector_outer / 2,
+                        pedal_connector_cavity_offset + pedal_connector_cavity_size + pedal_connector_m6_head_inset,
+                        pedal_connector_bolt_cage_bottom_z + pedal_connector_bolt_cage_z / 2
+                    ]) {
+                        rotate([-90, 0, 0]) {
+                            MetricHexSocketHeadCapScrew(key="M6", l=pedal_connector_m6_bolt_length);
                         }
                     }
                 }
@@ -438,13 +367,13 @@ translate([0, hammer_top_extrusion_start_y, hammer_top_extrusion_z - 5]) {
             }
 
             // Hammer joint (wraps top and side hammer extrusions at the blind joint)
-            hammer_joint_tx = (extrusion_size + 2 * hammer_joint_wall) / 2;
+            hammer_joint_tx = hammer_joint_width / 2;
             hammer_joint_ty = hammer_side_extrusion_y - extrusion_size + hammer_joint_right_offset - 0.5;
             hammer_joint_tz = hammer_top_extrusion_z - hammer_joint_bottom_offset - extrusion_size / 2;
             hammer_joint_side_hole_z = hammer_joint_bottom_offset + extrusion_size / 2;
-            hammer_joint_top_edge_y = extrusion_size + 2 * hammer_joint_wall;
+            hammer_joint_top_edge_y = hammer_joint_width;
             hammer_joint_side_x = extrusion_size + hammer_joint_right_offset / 2;
-            hammer_joint_top_z = hammer_joint_bottom_offset + extrusion_size + hammer_top_extrusion_offset + hammer_joint_wall;
+            hammer_joint_top_z = hammer_joint_head_seat_z;
 
             color(petg_color) {
                 translate([hammer_joint_tx, hammer_joint_ty, hammer_joint_tz]) {
@@ -497,13 +426,51 @@ translate([0, hammer_top_extrusion_start_y, hammer_top_extrusion_z - 5]) {
     }
 }
 
+// Places children at the pedal connector's origin on the bottom of the hammer side extrusion
+module pedal_connector_placed(hammer_side_extrusion_y, hammer_side_extrusion_start_z) {
+    translate([
+        pedal_connector_outer / 2,
+        hammer_side_extrusion_y + pedal_connector_outer / 2,
+        hammer_side_extrusion_start_z - hammer_side_extrusion_short_length - pedal_connector_z_offset
+    ]) {
+        rotate([0, 0, 180]) {
+            children();
+        }
+    }
+}
+
+// Places children in a hammer holder's own frame (as modelled in hammer_holder.scad).
+// side = -1: screw-head side, side = 1: nut side.
+module hammer_holder_placed(side) {
+    holder_back_y = plate_thickness + extrusion_length - hammer_holder_backstop_offset;
+    holder_origin_x = side * (extrusion_center_offset + hammer_holder_x_offset);
+    holder_origin_y = holder_back_y - (side == 1 ? hammer_holder_depth : 0);
+
+    rotate([90, 0, 180]) {
+        translate([-holder_origin_x, -hammer_holder_z_offset, holder_origin_y]) {
+            rotate([0, side == -1 ? 180 : 0, 0]) {
+                children();
+            }
+        }
+    }
+}
+
+// M5 pivot axis, in the hammer holder frame (Z along the bolt)
+module hammer_holder_pivot() {
+    translate([hammer_holder_wall + extrusion_size + hammer_holder_extra_width - hammer_holder_inner_corner_radius, hardware_holder_height / 2, hammer_holder_depth / 2]) {
+        rotate([90, 0, 90]) {
+            children();
+        }
+    }
+}
+
 // Mirrored sides
 for (side = [-1, 1]) {
-    baffle_x = side * baffle_x_offset;
+    extrusion_x = side * extrusion_center_offset;
 
     // Extrusion
     color(extrusion_color) {
-        translate([baffle_x, plate_thickness, 0]) {
+        translate([extrusion_x, plate_thickness, 0]) {
             rotate([-90, 0, 0]) {
                 makerbeam_xl_1515(extrusion_length);
             }
@@ -512,7 +479,7 @@ for (side = [-1, 1]) {
 
     // Baffle
     color(steel_color) {
-        translate([baffle_x, plate_thickness - baffle_thickness, 0]) {
+        translate([extrusion_x, plate_thickness - baffle_thickness, 0]) {
             rotate([-90, 0, 0]) {
                 baffle();
             }
@@ -522,7 +489,7 @@ for (side = [-1, 1]) {
     // M3 countersunk screws
     // Connects base plate to extrusion
     color(anodized_steel_color) {
-        translate([baffle_x, 0, 0]) {
+        translate([extrusion_x, 0, 0]) {
             rotate([-90, 0, 0]) {
                 MetricHexSocketCountersunkHeadScrew(key="M3", l=14);
             }
@@ -531,95 +498,48 @@ for (side = [-1, 1]) {
 
     // Hammer holders
     color(petg_color) {
-        holder_back_y = plate_thickness + extrusion_length - hammer_holder_backstop_offset;
-        holder_origin_x = side * (extrusion_center_offset + hammer_holder_x_offset);
-        holder_origin_z = hammer_holder_z_offset;
-        holder_origin_y = holder_back_y - (side == 1 ? hammer_holder_depth : 0);
-
-        rotate([90, 0, 180]) {
-            translate([-holder_origin_x, -holder_origin_z, holder_origin_y]) {
-                rotate([0, side == -1 ? 180 : 0, 0]) {
-                    hammer_holder(nut_side = (side == 1));
-                }
-            }
+        hammer_holder_placed(side) {
+            hammer_holder(nut_side = (side == 1));
         }
     }
 
     // M3 hex socket head cap screws
     // Goes through hammer holder and into extrusion
     color(steel_color) {
-        holder_back_y = plate_thickness + extrusion_length - hammer_holder_backstop_offset;
-        holder_origin_x = side * (extrusion_center_offset + hammer_holder_x_offset);
-        holder_origin_z = hammer_holder_z_offset;
-        holder_origin_y = holder_back_y - (side == 1 ? hammer_holder_depth : 0);
-
-        rotate([90, 0, 180]) {
-            translate([-holder_origin_x, -holder_origin_z, holder_origin_y]) {
-                rotate([0, side == -1 ? 180 : 0, 0]) {
-                    // Hole 1: through face into extrusion (axis ±X depending on side)
-                    translate([0, hardware_holder_height + hammer_holder_wall + extrusion_size / 2, hammer_holder_depth / 2]) {
-                        rotate([0, 90, 0]) {
-                            translate([0, 0, hammer_holder_m3_groove_depth]) {
-                                MetricHexSocketHeadCapScrew(key="M3", l=8);
-                            }
-                        }
+        hammer_holder_placed(side) {
+            // Hole 1: through face into extrusion (axis ±X depending on side)
+            translate([0, hardware_holder_height + hammer_holder_wall + extrusion_size / 2, hammer_holder_depth / 2]) {
+                rotate([0, 90, 0]) {
+                    translate([0, 0, hammer_holder_m3_groove_depth]) {
+                        MetricHexSocketHeadCapScrew(key="M3", l=8);
                     }
-                    // Hole 2: through bottom face into extrusion (axis ±Y depending on side)
-                    translate([hammer_holder_wall + extrusion_size / 2, hardware_holder_height, hammer_holder_depth / 2]) {
-                        rotate([-90, 0, 0]) {
-                            translate([0, 0, hammer_holder_m3_groove_depth]) {
-                                MetricHexSocketHeadCapScrew(key="M3", l=8);
-                            }
-                        }
+                }
+            }
+            // Hole 2: through bottom face into extrusion (axis ±Y depending on side)
+            translate([hammer_holder_wall + extrusion_size / 2, hardware_holder_height, hammer_holder_depth / 2]) {
+                rotate([-90, 0, 0]) {
+                    translate([0, 0, hammer_holder_m3_groove_depth]) {
+                        MetricHexSocketHeadCapScrew(key="M3", l=8);
                     }
                 }
             }
         }
     }
 
-    // M5 hex nut
-    if (side == 1) {
-        color(steel_color) {
-            holder_back_y = plate_thickness + extrusion_length - hammer_holder_backstop_offset;
-            holder_origin_x = side * (extrusion_center_offset + hammer_holder_x_offset);
-            holder_origin_z = hammer_holder_z_offset;
-            holder_origin_y = holder_back_y - hammer_holder_depth;
-
-            rotate([90, 0, 180]) {
-                translate([-holder_origin_x, -holder_origin_z, holder_origin_y]) {
-                    translate([hammer_holder_wall + extrusion_size + hammer_holder_extra_width - hammer_holder_inner_corner_radius, hardware_holder_height / 2, hammer_holder_depth / 2]) {
-                        rotate([90, 0, 90]) {
-                            rotate([0, 0, 30]) {
-                                translate([0, 0, 5]) {
-                                    MetricHexagonNut(key="M5");
-                                }
-                            }
+    // M5 pivot: nut on the nut side, screw from the other side through the
+    // hammer top extrusion and into the nut
+    color(steel_color) {
+        hammer_holder_placed(side) {
+            hammer_holder_pivot() {
+                if (side == 1) {
+                    rotate([0, 0, 30]) {
+                        translate([0, 0, 5]) {
+                            MetricHexagonNut(key="M5");
                         }
                     }
-                }
-            }
-        }
-    }
-
-    // M5 hex socket head cap screw
-    // Goes through hammer holder, into a hole in the extrusion and through the nut into the other hammer holder
-    if (side == -1) {
-        color(steel_color) {
-            holder_back_y = plate_thickness + extrusion_length - hammer_holder_backstop_offset;
-            holder_origin_x = side * (extrusion_center_offset + hammer_holder_x_offset);
-            holder_origin_z = hammer_holder_z_offset;
-            holder_origin_y = holder_back_y - (side == 1 ? hammer_holder_depth : 0);
-
-            rotate([90, 0, 180]) {
-                translate([-holder_origin_x, -holder_origin_z, holder_origin_y]) {
-                    rotate([0, 180, 0]) {
-                        translate([hammer_holder_wall + extrusion_size + hammer_holder_extra_width - hammer_holder_inner_corner_radius, hardware_holder_height / 2, hammer_holder_depth / 2]) {
-                            rotate([90, 0, 90]) {
-                                translate([0, 0, 6.5]) {
-                                    MetricHexSocketHeadCapScrew(key="M5", l=25);
-                                }
-                            }
-                        }
+                } else {
+                    translate([0, 0, 6.5]) {
+                        MetricHexSocketHeadCapScrew(key="M5", l=25);
                     }
                 }
             }

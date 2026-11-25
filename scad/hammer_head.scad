@@ -1,9 +1,7 @@
-extrusion_size = 15;
-m3_hole_radius = 3.2 / 2;
+include <config.scad>
+
 m3_countersink_diameter = 6;
 m3_countersink_depth = 1.5;
-
-hammer_head_height = 6;
 
 module hammer_head() {
     difference() {
