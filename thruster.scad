@@ -183,10 +183,9 @@ color(petg_color) {
 }
 
 // T-bushing in backstop groove
+t_bushing_body_height = 5;
+bushing_length = t_bushing_flange_thickness + t_bushing_body_height;
 color(nylon_color) {
-    t_bushing_flange_thickness = 3;
-    t_bushing_body_height = 5;
-    bushing_length = t_bushing_flange_thickness + t_bushing_body_height;
     translate([0, backstop_y - backstop_thickness - linear_shaft_groove_depth, 0]) {
         rotate([-90, 0, 0]) {
             t_bushing();
