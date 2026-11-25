@@ -19,7 +19,7 @@ spring_groove_depth = 2.5;
 spring_holder_screw_length = 30;
 spring_holder_screw_extra_for_nut = 4;
 
-use <../../../../lib/utils.scad>
+use <lib/utils.scad>
 
 module spring_holder(height = spring_holder_height) {
     w = distance_between_outside_faces_of_extrusions;

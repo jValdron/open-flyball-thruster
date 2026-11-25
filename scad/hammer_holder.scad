@@ -25,7 +25,7 @@ m5_nut_side = false;
 m5_nut_flat = 8;
 m5_nut_depth = 4;
 
-use <../../../../lib/utils.scad>
+use <lib/utils.scad>
 
 module hammer_holder(nut_side = undef) {
     _m5_nut = (nut_side != undef) ? nut_side : m5_nut_side;
